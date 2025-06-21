@@ -3,6 +3,7 @@ import Navbar from '../others/Navbar'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import ScrollTrigger from 'gsap/src/ScrollTrigger'
+import SnowflakeCursor from '../All Cursors/SnowFlakeCursor';
 import Lenis from 'lenis';
 
 function MeetUs() {
@@ -108,7 +109,7 @@ function MeetUs() {
         }
       })
 
-    gsap.from(".page2 .hero-right2", {
+    gsap.from(".page2 .hero-right2 , .msg-cont3", {
         height:0,
 
         y: 80,
@@ -175,7 +176,7 @@ function MeetUs() {
       scrub:2,
       stagger: 0.15,
       scrollTrigger: {
-        markers: true,
+        // markers: true,
         trigger: ".page3",
         scroller: "body",
         start: "top 60%",
@@ -192,7 +193,7 @@ function MeetUs() {
       scrub:2,
       stagger: 0.05,
       scrollTrigger: {
-        markers: true,
+        // markers: true,
         trigger: ".page3",
         scroller: "body",
         start: "top 60%",
@@ -211,7 +212,7 @@ function MeetUs() {
       scrub:2,
       stagger: 0.03,
       scrollTrigger: {
-        markers: true,
+        // markers: true,
         trigger: ".page3",
         scroller: "body",
         start: "top 60%",
@@ -230,6 +231,7 @@ function MeetUs() {
 
       <div className="w-full h-auto bg-[#fefae0] px-4">
         <Navbar />
+        <SnowflakeCursor/>
 
         {/* PAGE 1 */}
         <div className="page1 w-full h-[82vh] mt-2 flex mb-10">
@@ -289,7 +291,7 @@ function MeetUs() {
         {/* PAGE 3 */}
         <div className="page3 bg-[#fefae0] w-full h-[100vh] mt-20 flex">
           <div className="hero-left3 w-1/2 h-full flex justify-center items-center">
-            <div className="w-3/4 h-[90%] border rounded-xl px-6">
+            <div className="msg-cont3 w-3/4 h-[90%] border rounded-xl px-6">
               <div className="msg w-full h-full bg-center bg-no-repeat bg-cover relative p-10">
                 <h1 className='Going-on text-center text-4xl font-bold font-mono text-[#958c23]'>and It's Going On..</h1>
                 <p className='leading-[2em] good-para text-black font-mono mt-10 '>

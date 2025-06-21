@@ -43,347 +43,347 @@ function Home() {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    // useGSAP(() => {
-    //      const tl = gsap.timeline();
-    //       tl.from(".layer-2", {
-    //         y: -30,
-    //         scaleY: 0.5,
-    //         rotateX: 45,
-    //         duration: 0.8,
-    //         opacity: 0,
-    //         delay: 1.1,
-    //         ease:"power3.inOut"
-    //       },"start");
+    useGSAP(() => {
+         const tl = gsap.timeline();
+          tl.from(".layer-2", {
+            y: -30,
+            scaleY: 0.5,
+            rotateX: 45,
+            duration: 0.8,
+            opacity: 0,
+            delay: 1.1,
+            ease:"power3.inOut"
+          },"start");
 
-    //       tl.from(".layer-1", {
-    //         y: 30,
-    //         scaleY: 0.8,
-    //         rotateX: 45,
+          tl.from(".layer-1", {
+            y: 30,
+            scaleY: 0.8,
+            rotateX: 45,
 
-    //         duration: 0.7,
-    //         opacity: 0,
-    //         delay: 0.1,
-    //         ease:"power3.inOut"
-    //       });
+            duration: 0.7,
+            opacity: 0,
+            delay: 0.1,
+            ease:"power3.inOut"
+          });
 
-    //       tl.from(".top-circle-text", {
-    //         y: 30,
-    //         scaleY: 0.2,
-    //         rotateX: 90,
-    //         rotateY: 90,
-    //         duration: 1,
-    //         opacity: 0,
-    //         delay: 0.2,
-    //         ease:"power3.inOut"
-    //       });
-    //       tl.from(".main-title", {
-    //         y: 40,
-    //         x:-50,
-    //         scaleY: 0.3,
-    //         height:1,
-    //         rotateX: 90, 
-    //         // rotateY: -90, 
+          tl.from(".top-circle-text", {
+            y: 30,
+            scaleY: 0.2,
+            rotateX: 90,
+            rotateY: 90,
+            duration: 1,
+            opacity: 0,
+            delay: 0.2,
+            ease:"power3.inOut"
+          });
+          tl.from(".main-title", {
+            y: 40,
+            x:-50,
+            scaleY: 0.3,
+            height:1,
+            rotateX: 90, 
+            // rotateY: -90, 
 
-    //         duration: 1,
-    //         opacity: 0,
-    //         delay: 0.2,
-    //         ease:"power3.inOut"
-    //       });
-
-
+            duration: 1,
+            opacity: 0,
+            delay: 0.2,
+            ease:"power3.inOut"
+          });
 
 
 
 
 
 
-    //     gsap.from(".hero-left .text-area .name", {
-    //         y: 30,
-    //         x: 25,
-    //         scaleY: 0.3,
-    //         rotateX: 45,
-
-    //         duration: 0.7,
-    //         opacity: 0,
-    //         delay: 0.5,
-    //         ease: "power.inOut",
-    //         scrollTrigger: {
-    //             trigger: ".page2",
-    //             scroller: "body",
-    //             // markers:true,
-    //             start: "top 70%",
-    //             end: "bottom 40%",
-    //             toggleActions: "play none none reverse", // (optional) Controls animation behavior
-
-    //         }
-    //     })
 
 
+        gsap.from(".hero-left .text-area .name", {
+            y: 30,
+            x: 25,
+            scaleY: 0.3,
+            rotateX: 45,
 
-    //     gsap.from(".hero-left .text-area .good-para ,.hero-left .text-area  .about-us", {
-    //         y: 30,
-    //         x: 25,
-    //         scaleY: 0.3,
-    //         rotateX: 45,
+            duration: 0.7,
+            opacity: 0,
+            delay: 0.5,
+            ease: "power.inOut",
+            scrollTrigger: {
+                trigger: ".page2",
+                scroller: "body",
+                // markers:true,
+                start: "top 70%",
+                end: "bottom 40%",
+                toggleActions: "play none none reverse", // (optional) Controls animation behavior
 
-    //         duration: 0.9,
-    //         opacity: 0,
-    //         delay: 0.9,
-    //         ease: "power.inOut",
-    //         scrollTrigger: {
-    //             trigger: ".page2",
-    //             scroller: "body",
-    //             // markers:true,
-    //             start: "top 55%",
-    //             end: "bottom 30%",
-    //             toggleActions: "play none none reverse", // (optional) Controls animation behavior
-
-    //         }
-    //     })
-
-
-    //     gsap.from(".hero-right .img1-mam   ", {
-    //         y: -30,
-    //         height: 10,
-    //         // x:25,
-    //         // scaleY: 0.3,
-    //         rotateX: 45,
-
-    //         duration: 0.9,
-    //         opacity: 0,
-    //         delay: 1,
-    //         ease: "power.inOut",
-    //         scrollTrigger: {
-    //             trigger: ".page2",
-    //             scroller: "body",
-    //             // markers:true,
-    //             start: "top 45%",
-    //             end: "bottom 20%",
-    //             toggleActions: "play none none reverse", // (optional) Controls animation behavior
-
-    //         }
-    //     })
-    //     gsap.from(".hr-line   ", {
-    //         y: -30,
-    //         height: 10,
-    //         // x:25,
-    //         scaleX: 0.3,
-    //         rotateX: 45,
-
-    //         duration: 0.9,
-    //         opacity: 0,
-    //         delay: 1,
-    //         ease: "power.inOut",
-    //         scrollTrigger: {
-    //             trigger: ".hr-line",
-    //             scroller: "body",
-    //             // markers:true,
-    //             start: "top 85%",
-    //             end: "bottom 50%",
-    //             toggleActions: "play none none reverse", // (optional) Controls animation behavior
-
-    //         }
-    //     })
+            }
+        })
 
 
 
-    //     gsap.from(".page3 .gallery , .spring-flowers1 ", {
-    //         y: -30,
-    //         height: 10,
-    //         // x:25,
-    //         // scaleY: 0.3,
-    //         rotateX: 45,
+        gsap.from(".hero-left .text-area .good-para ,.hero-left .text-area  .about-us", {
+            y: 30,
+            x: 25,
+            scaleY: 0.3,
+            rotateX: 45,
 
-    //         duration: 0.9,
-    //         opacity: 0,
-    //         delay: 1,
-    //         stagger:0.5,
-    //         ease: "power.inOut",
-    //         scrollTrigger: {
-    //             trigger: " .gallery",
-    //             scroller: "body",
-    //             // markers:true,
-    //             start: "top 70%",
-    //             end: "bottom 20%",
-    //             toggleActions: "play none none reverse", // (optional) Controls animation behavior
+            duration: 0.9,
+            opacity: 0,
+            delay: 0.9,
+            ease: "power.inOut",
+            scrollTrigger: {
+                trigger: ".page2",
+                scroller: "body",
+                // markers:true,
+                start: "top 55%",
+                end: "bottom 30%",
+                toggleActions: "play none none reverse", // (optional) Controls animation behavior
 
-    //         }
-    //     })
-
-    //     gsap.from(".page3 .cards-gallery  ", {
-    //         y: -30,
-    //         rotateY: 45,
-
-    //         duration: 0.9,
-    //         opacity: 0,
-    //         delay: 0.7,
-    //         ease: "power.inOut",
-    //         scrollTrigger: {
-    //             trigger: " .page3 .cards-gallery ",
-    //             scroller: "body",
-    //             // markers: true,
-    //             start: "top 38%",
-    //             end: "bottom 20%",
-    //             toggleActions: "play none none reverse", // (optional) Controls animation behavior
-
-    //         }
-    //     })
+            }
+        })
 
 
+        gsap.from(".hero-right .img1-mam   ", {
+            y: -30,
+            height: 10,
+            // x:25,
+            // scaleY: 0.3,
+            rotateX: 45,
 
-    //     gsap.from(".page4  >img ", {
-    //         opacity: 0,
+            duration: 0.9,
+            opacity: 0,
+            delay: 1,
+            ease: "power.inOut",
+            scrollTrigger: {
+                trigger: ".page2",
+                scroller: "body",
+                // markers:true,
+                start: "top 45%",
+                end: "bottom 20%",
+                toggleActions: "play none none reverse", // (optional) Controls animation behavior
 
-    //         // rotateX: 90,
-    //         duration: 1.5,
-    //         delay: 0.5,
-    //         ease: "power3.inOut",
-    //         stagger: true,
-    //         scrollTrigger: {
-    //             trigger: ".page4",
-    //             scroller: "body",
-    //             // markers: true,               
-    //             start: "top 70%",
-    //             end: "top 40%",
-    //             toggleActions: "play none none reverse", // (optional) Controls animation behavior
+            }
+        })
+        gsap.from(".hr-line   ", {
+            y: -30,
+            height: 10,
+            // x:25,
+            scaleX: 0.3,
+            rotateX: 45,
 
-    //         }
-    //     })
+            duration: 0.9,
+            opacity: 0,
+            delay: 1,
+            ease: "power.inOut",
+            scrollTrigger: {
+                trigger: ".hr-line",
+                scroller: "body",
+                // markers:true,
+                start: "top 85%",
+                end: "bottom 50%",
+                toggleActions: "play none none reverse", // (optional) Controls animation behavior
 
-
-
-
-    //     gsap.from(".page4 .slider-heading ", {
-    //         opacity: 0,
-    //         scaleX: 0,
-    //         y: 100,
-    //         width: 10,
-    //         // rotateX: 90,
-    //         duration: 1.5,
-    //         ease: "power3.inOut",
-    //         stagger: true,
-    //         scrollTrigger: {
-    //             trigger: ".page4",
-    //             scroller: "body",
-    //             // markers: true,               
-    //             start: "top 70%",
-    //             end: "top 40%",
-    //             toggleActions: "play none none reverse", // (optional) Controls animation behavior
-
-    //         }
-    //     })
-
-    //     gsap.from(".page4 .drag-img", {
-    //         opacity: 0,
-    //         scaleX: 0,
-    //         y: 100,
-    //         width: 10,
-    //         // rotateX: 90,
-    //         duration: 1.5,
-    //         ease: "power3.inOut",
-    //         stagger: true,
-    //         scrollTrigger: {
-    //             trigger: ".page4",
-    //             scroller: "body",
-    //             // markers: true,
-    //             start: "top 45%",
-    //             end: "top 30%",
-    //             toggleActions: "play none none reverse", // (optional) Controls animation behavior
-
-    //         }
-    //     })
-    //     gsap.from(".page4 #falling-text", {
-    //         opacity: 0,
-
-    //         duration: 1.5,
-    //         ease: "power3.inOut",
-    //         stagger: true,
-    //         scrollTrigger: {
-    //             trigger: ".page4",
-    //             scroller: "body",
-    //             // markers: true,
-    //             start: "top 55%",
-    //             end: "top 35%",
-    //             toggleActions: "play none none reverse", // (optional) Controls animation behavior
-
-    //         }
-    //     })
-
-
-    //         gsap.from(".page5 .slider-heading2 , .Spring-flowers2  ", {
-    //         opacity: 0,
-    //         scaleX: 0,
-    //         y: 100,
-    //         width: 10,
-    //         // rotateX: 90,
-    //         duration: 1.5,
-    //         ease: "power3.inOut",
-    //         stagger: true,
-    //         scrollTrigger: {
-    //             trigger: ".page5",
-    //             scroller: "body",
-    //             // markers: true,               
-    //             start: "top 80%",
-    //             end: "top 40%",
-    //             toggleActions: "play none none reverse", // (optional) Controls animation behavior
-
-    //         }
-    //     })
-    //     gsap.from(".page5 ", {
-    //         opacity: 0,
-    //         duration: 1.5,
-    //         ease: "power3.inOut",
-    //         stagger: true,
-    //         scrollTrigger: {
-    //             trigger: ".page5",
-    //             scroller: "body",
-    //             // markers: true,
-    //             start: "top 80%",
-    //             end: "bottom 50%",
-    //             toggleActions: "play none none reverse", // (optional) Controls animation behavior
-
-    //         }
-    //     })
-
-    //     gsap.from(".page5 .image-area ", {
-    //         opacity: 0,
-    //         scaleY: 0,
-    //         y: -100,
-    //         // width: 10,
-    //         rotateX: 90,
-    //         duration: 1.5,
-    //         ease: "power3.inOut",
-    //         stagger: true,
-    //         scrollTrigger: {
-    //             trigger: ".page5",
-    //             scroller: "body",
-    //             // markers: true,
-    //             start: "top 60%",
-    //             end: "bottom 35%",
-    //             toggleActions: "play none none reverse", // (optional) Controls animation behavior
-
-    //         }
-    //     })
-    //     gsap.from(".page5 >.end-msg1", {
-    //          y: 60, // from below
-    //         opacity: 0,
-    //         duration: 2,
-    //         ease: "power3.out",
-    //         stagger: 0.05,
-    //         scrollTrigger: {
-    //             trigger: ".page5",
-    //             scroller: "body",
-    //             // markers: true,
-    //             start: "top 10%",
-    //             end: "top 0%",
-    //             toggleActions: "play none none reverse", // (optional) Controls animation behavior
-
-    //         }
-    //     })
+            }
+        })
 
 
 
-    // })
+        gsap.from(".page3 .gallery , .spring-flowers1 ", {
+            y: -30,
+            height: 10,
+            // x:25,
+            // scaleY: 0.3,
+            rotateX: 45,
+
+            duration: 0.9,
+            opacity: 0,
+            delay: 1,
+            stagger:0.5,
+            ease: "power.inOut",
+            scrollTrigger: {
+                trigger: " .gallery",
+                scroller: "body",
+                // markers:true,
+                start: "top 70%",
+                end: "bottom 20%",
+                toggleActions: "play none none reverse", // (optional) Controls animation behavior
+
+            }
+        })
+
+        gsap.from(".page3 .cards-gallery  ", {
+            y: -30,
+            rotateY: 45,
+
+            duration: 0.9,
+            opacity: 0,
+            delay: 0.7,
+            ease: "power.inOut",
+            scrollTrigger: {
+                trigger: " .page3 .cards-gallery ",
+                scroller: "body",
+                // markers: true,
+                start: "top 38%",
+                end: "bottom 20%",
+                toggleActions: "play none none reverse", // (optional) Controls animation behavior
+
+            }
+        })
+
+
+
+        gsap.from(".page4  >img ", {
+            opacity: 0,
+
+            // rotateX: 90,
+            duration: 1.5,
+            delay: 0.5,
+            ease: "power3.inOut",
+            stagger: true,
+            scrollTrigger: {
+                trigger: ".page4",
+                scroller: "body",
+                // markers: true,               
+                start: "top 70%",
+                end: "top 40%",
+                toggleActions: "play none none reverse", // (optional) Controls animation behavior
+
+            }
+        })
+
+
+
+
+        gsap.from(".page4 .slider-heading ", {
+            opacity: 0,
+            scaleX: 0,
+            y: 100,
+            width: 10,
+            // rotateX: 90,
+            duration: 1.5,
+            ease: "power3.inOut",
+            stagger: true,
+            scrollTrigger: {
+                trigger: ".page4",
+                scroller: "body",
+                // markers: true,               
+                start: "top 70%",
+                end: "top 40%",
+                toggleActions: "play none none reverse", // (optional) Controls animation behavior
+
+            }
+        })
+
+        gsap.from(".page4 .drag-img", {
+            opacity: 0,
+            scaleX: 0,
+            y: 100,
+            width: 10,
+            // rotateX: 90,
+            duration: 1.5,
+            ease: "power3.inOut",
+            stagger: true,
+            scrollTrigger: {
+                trigger: ".page4",
+                scroller: "body",
+                // markers: true,
+                start: "top 45%",
+                end: "top 30%",
+                toggleActions: "play none none reverse", // (optional) Controls animation behavior
+
+            }
+        })
+        gsap.from(".page4 #falling-text", {
+            opacity: 0,
+
+            duration: 1.5,
+            ease: "power3.inOut",
+            stagger: true,
+            scrollTrigger: {
+                trigger: ".page4",
+                scroller: "body",
+                // markers: true,
+                start: "top 55%",
+                end: "top 35%",
+                toggleActions: "play none none reverse", // (optional) Controls animation behavior
+
+            }
+        })
+
+
+            gsap.from(".page5 .slider-heading2 , .Spring-flowers2  ", {
+            opacity: 0,
+            scaleX: 0,
+            y: 100,
+            width: 10,
+            // rotateX: 90,
+            duration: 1.5,
+            ease: "power3.inOut",
+            stagger: true,
+            scrollTrigger: {
+                trigger: ".page5",
+                scroller: "body",
+                // markers: true,               
+                start: "top 80%",
+                end: "top 40%",
+                toggleActions: "play none none reverse", // (optional) Controls animation behavior
+
+            }
+        })
+        gsap.from(".page5 ", {
+            opacity: 0,
+            duration: 1.5,
+            ease: "power3.inOut",
+            stagger: true,
+            scrollTrigger: {
+                trigger: ".page5",
+                scroller: "body",
+                // markers: true,
+                start: "top 80%",
+                end: "bottom 50%",
+                toggleActions: "play none none reverse", // (optional) Controls animation behavior
+
+            }
+        })
+
+        gsap.from(".page5 .image-area ", {
+            opacity: 0,
+            scaleY: 0,
+            y: -100,
+            // width: 10,
+            rotateX: 90,
+            duration: 1.5,
+            ease: "power3.inOut",
+            stagger: true,
+            scrollTrigger: {
+                trigger: ".page5",
+                scroller: "body",
+                // markers: true,
+                start: "top 60%",
+                end: "bottom 35%",
+                toggleActions: "play none none reverse", // (optional) Controls animation behavior
+
+            }
+        })
+        gsap.from(".page5 >.end-msg1", {
+             y: 60, // from below
+            opacity: 0,
+            duration: 2,
+            ease: "power3.out",
+            stagger: 0.05,
+            scrollTrigger: {
+                trigger: ".page5",
+                scroller: "body",
+                // markers: true,
+                start: "top 10%",
+                end: "top 0%",
+                toggleActions: "play none none reverse", // (optional) Controls animation behavior
+
+            }
+        })
+
+
+
+    })
 
 
 

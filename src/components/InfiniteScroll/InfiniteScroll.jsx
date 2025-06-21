@@ -1,11 +1,14 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { Observer } from "gsap/Observer";
+import { useGSAP } from "@gsap/react";
 
 
 gsap.registerPlugin(Observer);
 
 export default function InfiniteScroll({
+
+
   width = "30rem",
   maxHeight = "100%",
   negativeMargin = "-0.5em",
@@ -14,7 +17,7 @@ export default function InfiniteScroll({
   isTilted = false,
   tiltDirection = "left",
   autoplay = false,
-  autoplaySpeed = 0.5,
+  autoplaySpeed = 0.2,
   autoplayDirection = "down",
   pauseOnHover = false,
   
@@ -28,6 +31,33 @@ export default function InfiniteScroll({
       ? "rotateX(20deg) rotateZ(-20deg) skewX(20deg)"
       : "rotateX(20deg) rotateZ(20deg) skewX(-20deg)";
   };
+
+
+
+ useGSAP(()=>{
+
+  const tl = gsap.timeline()
+
+  tl.from(".Spring-flowers2",{
+    x:-10,
+    opacity:0,
+    duration:1.5,
+    delay:0.1,
+    scrub:3,
+    ease:"expo.inOut"
+  })
+  tl.from(".list-elems",{
+     y:10,
+    opacity:0,
+    duration:1,
+    // delay:0.1,
+    scrub:3,
+    ease:"expo.inOut"
+  })
+
+
+
+ })
 
   useEffect(() => {
     const container = containerRef.current;
@@ -139,11 +169,13 @@ export default function InfiniteScroll({
   ref={wrapperRef}
   style={{ maxHeight }}
 >
-  <div className="absolute top-0 left-0 w-full h-1/4 bg-gradient-to-b from-zinc-500 to-transparent z-10 pointer-events-none"></div>
+      <div className="Spring-flowers2 absolute left-0 top-[-25%] w-[50%] h-100 bg-cover bg-center" style={{ backgroundImage: "url('/Videos/AnimationFl.gif')" }}></div>
+
+  <div className="absolute top-0 left-0 w-full h-10 bg-gradient-to-b from-pink-100 to-transparent z-10 pointer-events-none"></div>
   <div className="absolute bottom-0 left-0 w-full h-1/4  z-10 shadow-lg pointer-events-none"></div>
 
   <div
-    className="flex flex-col overscroll-contain px-4 cursor-grab origin-center"
+    className="flex flex-col overscroll-contain px-4 cursor-grab origin-center list-elems"
     ref={containerRef}
     style={{
       width,
@@ -152,7 +184,7 @@ export default function InfiniteScroll({
   >
     {items.map((item, i) => (
       <div
-        className="flex items-center justify-center p-4 text-xl font-semibold text-center border-2 border-zinc-700 rounded-[15px] select-none box-border relative"
+        className="flex items-center justify-center p-4 text-xl font-semibold text-center border-2 border-zinc-700 rounded-[15px] select-none box-border relative "
         key={i}
         style={{
           height: `${itemMinHeight}px`,
