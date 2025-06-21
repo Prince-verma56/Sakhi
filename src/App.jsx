@@ -40,7 +40,7 @@ const router = createBrowserRouter([
   // Initialize Lenis
   const lenis = new Lenis({
     lerp:22,
-    duration:2.6
+    duration:4.6
   });
 
   // Use requestAnimationFrame to continuously update the scroll
