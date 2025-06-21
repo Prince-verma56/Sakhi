@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+--root{
+    --text-color:#847B1A;
+    --bg-color:#fefae0;
+}
+
+
+.active-link{
+  border-bottom: 2px solid rgb(176, 195, 32);
+}
