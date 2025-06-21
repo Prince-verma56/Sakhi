@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../others/Navbar'
-import InfiniteScroll from '../InfiniteScroll/InfiniteScroll'
+import Navbar from '../components/others/Navbar'
+import InfiniteScroll from '../components/InfiniteScroll/InfiniteScroll'
 
 function About() {
     const items = [

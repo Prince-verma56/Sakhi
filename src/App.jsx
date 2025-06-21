@@ -1,12 +1,12 @@
 import React from 'react'
 import Lenis from 'lenis'
-import Home from './components/pages/Home';
+import Home from './pages/Home';
 import SnowflakeCursor from './components/All Cursors/SnowFlakeCursor';
 import { createBrowserRouter , RouterProvider } from 'react-router-dom';
 import Navbar from './components/others/Navbar';
-import MeetUs from './components/pages/MeetUs';
-import Gratitude from './components/pages/Gratitude';
-import About from './components/pages/About';
+import MeetUs from './pages/MeetUs';
+import Gratitude from './pages/Gratitude';
+import About from './pages/About';
 
 
 

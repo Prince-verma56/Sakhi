@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "../others/Navbar";
-import MagnetLines from "../MagnetLines/MagnetLines";
+import Navbar from "../components/others/Navbar";
+import MagnetLines from "../components/MagnetLines/MagnetLines";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from 'gsap/src/ScrollTrigger'
 import gsap from "gsap";
-import SnowflakeCursor from "../All Cursors/SnowFlakeCursor";
-import SnowflakeCursor2 from "../All Cursors/SnowFlakeCursor2";
+import SnowflakeCursor from "../components/All Cursors/SnowFlakeCursor";
+import SnowflakeCursor2 from "../components/All Cursors/SnowFlakeCursor2";
 
 function Gratitude() {
 

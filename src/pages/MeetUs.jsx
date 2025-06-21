@@ -1,9 +1,9 @@
 import React, { useRef } from 'react'
-import Navbar from '../others/Navbar'
+import Navbar from '../components/others/Navbar'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import ScrollTrigger from 'gsap/src/ScrollTrigger'
-import SnowflakeCursor from '../All Cursors/SnowFlakeCursor';
+import SnowflakeCursor from '../components/All Cursors/SnowFlakeCursor';
 import Lenis from 'lenis';
 
 function MeetUs() {
