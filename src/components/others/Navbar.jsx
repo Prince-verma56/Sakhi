@@ -39,7 +39,7 @@ function Navbar() {
                         })} */}
                         <NavLink to='/' className={({ isActive }) => isActive ? "active-link" : ""}> <h1 className='text-2xl text-[#847B1A] '>Home</h1></NavLink>
                         <NavLink to='/meet-us' className={({ isActive }) => isActive ? "active-link" : ""}> <h1 className='text-2xl text-[#847B1A] cursor-pointer'>Meet us</h1></NavLink>
-                        <NavLink to='/Gallery' className={({ isActive }) => isActive ? "active-link" : ""}> <h1 className='text-2xl text-[#847B1A] cursor-pointer'>Gallery</h1></NavLink>
+                        <NavLink to='/gallery' className={({ isActive }) => isActive ? "active-link" : ""}> <h1 className='text-2xl text-[#847B1A] cursor-pointer'>Gallery</h1></NavLink>
                     </div>
 
 
@@ -47,7 +47,7 @@ function Navbar() {
 
                     <div className="nav-right h-full w-1/2 flex items-center justify-center gap-10">
                         <NavLink to='/gratitude' className={({ isActive }) => isActive ? "active-link" : ""}> <h1 className='text-2xl text-[#847B1A] cursor-pointer'>Gratitude</h1></NavLink>
-                        <NavLink to='/Gallery' className={({ isActive }) => isActive ? "active-link" : ""}> <h1 className='text-2xl text-[#847B1A] cursor-pointer'>Memories</h1></NavLink>
+                        <NavLink to='/memories' className={({ isActive }) => isActive ? "active-link" : ""}> <h1 className='text-2xl text-[#847B1A] cursor-pointer'>Memories</h1></NavLink>
                         <NavLink to='/about' className={({ isActive }) => isActive ? "active-link" : ""}> <h1 className='text-2xl text-[#847B1A] cursor-pointer'>About Diksha</h1></NavLink>
 
                     </div>

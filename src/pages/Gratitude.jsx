@@ -19,68 +19,75 @@ function Gratitude() {
     // Page1
 
 
+    tl.from(".layer ", {
+      y: 60, // from below
+      opacity: 0,
+      duration: 0.6,
+      ease: "power3.out",
+      stagger: 0.05,
+    });
     tl.from(".chars-text", {
-        y: 60, // from below
-        opacity: 0,
-        duration: 0.6,
-        ease: "power3.out",
-        stagger: 0.05,
+      y: 60, // from below
+      opacity: 0,
+      duration: 0.6,
+      ease: "power3.out",
+      stagger: 0.05,
     });
 
     gsap.from(".page1 .hero-left2 ", {
-       height:0,
-    y: 80,
+      height: 0,
+      y: 80,
 
-    scaleY: 0.8,
-    opacity: 0,
-    // rotateY: 30,
-    duration: 1.4,
-    delay: 0.2,
-    ease: "power4.out",
-    stagger: 0.15,
-        scrollTrigger:{
-       trigger:".page1",
-       scroller:"body",
-       start:"top 70%",
-       end:"bottom 40%",
-      //  markers:true
-        }
+      scaleY: 0.8,
+      opacity: 0,
+      // rotateY: 30,
+      duration: 1.4,
+      delay: 0.2,
+      ease: "power4.out",
+      stagger: 0.15,
+      scrollTrigger: {
+        trigger: ".page1",
+        scroller: "body",
+        start: "top 70%",
+        end: "bottom 40%",
+        //  markers:true
+      }
 
     });
 
     gsap.from(".page1 .from-stranger ,.Stranger-cont ", {
-     y: 60, // from below
-    opacity: 0,
-    duration: 2,
-    delay:0.7,
-    scrub:2,
-    ease: "power3.out",
-    stagger: 0.05,
-        scrollTrigger:{
-       trigger:".page1",
-       scroller:"body",
-       start:"top 70%",
-       end:"bottom 40%",
-      //  markers:true
-        }
+      y: 60, // from below
+      opacity: 0,
+      duration: 2,
+      delay: 0.7,
+      scrub: 2,
+      ease: "power3.out",
+      stagger: 0.05,
+      scrollTrigger: {
+        trigger: ".page1",
+        scroller: "body",
+        start: "top 70%",
+        end: "bottom 40%",
+        //  markers:true
+      }
 
     });
 
     gsap.from(".para-msg1 ", {
-        y: 60, // from below
-        x:-19,
+      y: 60, // from below
+      x: -19,
 
-        opacity: 0,
-        duration: 4,
-        ease: "expo.inOut",
-        stagger: 0.001,
-           scrollTrigger:{
-       trigger:".page1",
-       scroller:"body",
-       start:"top 68%",
-       end:"bottom 36%",
-      //  markers:true
-        }
+      opacity: 0,
+      duration: 4,
+      ease: "expo.inOut",
+      stagger: 0.001,
+      scrollTrigger: {
+        trigger: ".page1",
+        scroller: "body",
+        start: "top 68%",
+        end: "bottom 36%",
+        //  markers:true
+      }
 
     });
 
@@ -134,14 +141,14 @@ function Gratitude() {
 
     });
 
-    gsap.from(".para-msg2 ", {
+    gsap.from(".para-msg2 , .gold-line1 ", {
       y: 60, // from below
       x: -19,
       opacity: 0,
       duration: 1.2,
       delay: 0.1,
       ease: "expo.inOut",
-      scrub:2,
+      scrub: 2,
       stagger: 0.03,
       scrollTrigger: {
         trigger: ".page2",
@@ -199,14 +206,14 @@ function Gratitude() {
 
     });
 
-    gsap.from(".para-msg3 ", {
+    gsap.from(".para-msg3 , .gold-line2  ", {
       y: 60, // from below
       x: -19,
       opacity: 0,
       duration: 1.2,
       delay: 0.1,
       ease: "expo.inOut",
-      scrub:2,
+      scrub: 2,
       stagger: 0.03,
       scrollTrigger: {
         trigger: ".page3",
@@ -225,7 +232,7 @@ function Gratitude() {
 
   return (
     <>
-       <SnowflakeCursor/>
+      <SnowflakeCursor />
       <div className="h-full w-full bg-[#fefae0] overflow-x-hidden relative px-4">
         <Navbar />
 
@@ -281,7 +288,9 @@ function Gratitude() {
             </div>
           </div>
         </div>
-
+        <div className="gold-line1 w-[80%] mx-30 h-20 flex justify-center items-center mt-20">
+          <img src="/Lines/LineCom 2.png" width={1000} alt="" />
+        </div>
         {/* PAGE 2 */}
         <div className="page2 h-screen w-full mt-10 px-4">
           <div className="hero w-[90%] h-[95%] mx-auto flex justify-between items-center gap-6 px-4">
@@ -300,6 +309,7 @@ function Gratitude() {
               </p>
             </div>
 
+
             {/* RIGHT SIDE (Image) */}
             <div className="chulbuli hero2-right w-1/2 h-full flex items-center justify-center">
               <div className="w-[95%] h-[100%] rounded-3xl overflow-hidden border flex items-center justify-center bg-center bg-cover">
@@ -313,6 +323,9 @@ function Gratitude() {
           </div>
         </div>
 
+        <div className="gold-line2 w-[80%] mx-30 h-20 flex justify-center items-center mt-20">
+          <img src="/Lines/LineCom 2.png" width={1000} alt="" />
+        </div>
         {/* PAGE 3 */}
         <div className="page3 h-screen w-full mt-10 px-4">
           <div className="Strong hero-left3 w-[90%] h-[95%] m-auto  flex justify-around px-4">

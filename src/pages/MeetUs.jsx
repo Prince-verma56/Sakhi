@@ -36,121 +36,121 @@ function MeetUs() {
     const tl = gsap.timeline()
 
 
-      tl.from(".page1 .hero-right1", {
-        height:0,
-        y: 80,
-        x: 0,
-        z: -2,
-        scaleY: 0.8,
-        opacity: 0,
-        // rotateY: 30,
-        duration: 1.4,
-        delay: 0.2,
-        ease: "power4.out",
-        stagger: 0.15,
-      }, "start")
+    tl.from(".page1 .hero-right1", {
+      height: 0,
+      y: 80,
+      x: 0,
+      z: -2,
+      scaleY: 0.8,
+      opacity: 0,
+      // rotateY: 30,
+      duration: 1.4,
+      delay: 0.2,
+      ease: "power4.out",
+      stagger: 0.15,
+    }, "start")
 
-      tl.from(".page1 .hero-left", {
-        height:0,
-        scaleX:0,
-        y: 80,
-        x: 0,
-        z: -2,
-        scaleY: 0.8,
-        opacity: 0,
-        // rotateY: 30,
-        duration: 1.4,
-        delay: 0.2,
-        scrub:2,
-        ease: "power4.out",
-        stagger: 0.15,
-      }, "start")
+    tl.from(".page1 .hero-left", {
+      height: 0,
+      scaleX: 0,
+      y: 80,
+      x: 0,
+      z: -2,
+      scaleY: 0.8,
+      opacity: 0,
+      // rotateY: 30,
+      duration: 1.4,
+      delay: 0.2,
+      scrub: 2,
+      ease: "power4.out",
+      stagger: 0.15,
+    }, "start")
 
-      tl.from(".our-meet ", {
-        y: 60, // from below
-        opacity: 0,
-        duration: 2,
-        delay:0.7,
-        scrub:2,
-        ease: "power3.out",
-        stagger: 0.05,
-      }, "start")
+    tl.from(".our-meet ", {
+      y: 60, // from below
+      opacity: 0,
+      duration: 2,
+      delay: 0.7,
+      scrub: 2,
+      ease: "power3.out",
+      stagger: 0.05,
+    }, "start")
 
-      tl.from(".para-msg1", {
-              y: 60, // from below
-              opacity: 0,
-              duration: 0.6,
-              delay:0.1,
-              scrub:2,
-              ease: "power3.out",
-              stagger: 0.03,
-      },"end")
-
-
+    tl.from(".para-msg1", {
+      y: 60, // from below
+      opacity: 0,
+      duration: 0.6,
+      delay: 0.1,
+      scrub: 2,
+      ease: "power3.out",
+      stagger: 0.03,
+    }, "end")
 
 
-      // Second Page
 
-       gsap.from(".page2 .hero-left2", {
 
-        height:0,
-        opacity: 0,
-        duration: 1,
-        ease: "power.inOut",
-        scrub:2,
-        stagger: 0.001,
-        scrollTrigger: {
-          // markers: true,
-          trigger: ".page2",
-          scroller: "body",
-          start: "top 60%",
-          end: "bottom 30%"
+    // Second Page
 
-        }
-      })
+    gsap.from(".page2 .hero-left2 , .blossom", {
+
+      height: 0,
+      opacity: 0,
+      duration: 1,
+      ease: "power.inOut",
+      scrub: 2,
+      stagger: 0.001,
+      scrollTrigger: {
+        // markers: true,
+        trigger: ".page2",
+        scroller: "body",
+        start: "top 60%",
+        end: "bottom 30%"
+
+      }
+    })
 
     gsap.from(".page2 .hero-right2 , .msg-cont3", {
-        height:0,
+      height: 0,
 
-        y: 80,
-        x: 100,
-        z: -2,
-        scaleY: 0.8,
-        opacity: 0,
-        // rotateY: 30,
-        duration: 1.4,
-        delay: 0.2,
-        ease: "power4.out",
-        scrub:2,
-        stagger: 0.15,
-              scrollTrigger: {
-          // markers: true,
-          trigger: ".page2",
-          scroller: "body",
-          start: "top 60%",
-          end: "bottom 30%"
+      y: 80,
+      x: 100,
+      z: -2,
+      scaleY: 0.8,
+      opacity: 0,
+      // rotateY: 30,
+      duration: 1.4,
+      delay: 0.2,
+      ease: "power4.out",
+      scrub: 2,
+      stagger: 0.15,
+      scrollTrigger: {
+        // markers: true,
+        trigger: ".page2",
+        scroller: "body",
+        start: "top 60%",
+        end: "bottom 30%"
 
-        }
-      }, "start")
+      }
+    }, "start")
 
 
-      gsap.from(".para-msg2", {
-        y: 60, // from below
-        x: -19,
-        opacity: 0,
-        duration: 2,
-        delay:0.6,
-        ease: "expo.inOut",
-        stagger: 0.001,
-        scrollTrigger: {
-          // markers: true,
-          trigger: ".page2",
-          scroller: "body",
-          start: "top 60%",
-          end: "bottom 30%"
+    gsap.from(".para-msg2", {
+      y: 60, // from below
+      x: -19,
+      opacity: 0,
+      duration: 2,
+      delay: 0.6,
+      ease: "expo.inOut",
+      stagger: 0.001,
+      scrollTrigger: {
+        // markers: true,
+        trigger: ".page2",
+        scroller: "body",
+        start: "top 60%",
+        end: "bottom 30%"
 
-        }
-      })
+      }
+    })
 
 
 
@@ -162,7 +162,7 @@ function MeetUs() {
 
 
 
-    gsap.from(".page3 .hero-right3", {
+    gsap.from(".page3 .hero-right3 , .blossom2", {
       height: 0,
       y: 80,
       x: 0,
@@ -173,7 +173,7 @@ function MeetUs() {
       duration: 1.3,
       delay: 0.2,
       ease: "power3.inOut",
-      scrub:2,
+      scrub: 2,
       stagger: 0.15,
       scrollTrigger: {
         // markers: true,
@@ -190,7 +190,7 @@ function MeetUs() {
       opacity: 0,
       duration: 0.9,
       ease: "power3.out",
-      scrub:2,
+      scrub: 2,
       stagger: 0.05,
       scrollTrigger: {
         // markers: true,
@@ -209,7 +209,7 @@ function MeetUs() {
       duration: 1.2,
       delay: 0.1,
       ease: "expo.inOut",
-      scrub:2,
+      scrub: 2,
       stagger: 0.03,
       scrollTrigger: {
         // markers: true,
@@ -231,10 +231,10 @@ function MeetUs() {
 
       <div className="w-full h-auto bg-[#fefae0] px-4">
         <Navbar />
-        <SnowflakeCursor/>
+        <SnowflakeCursor />
 
         {/* PAGE 1 */}
-        <div className="page1 w-full h-[82vh] mt-2 flex mb-10">
+        <div className="page1 w-full h-[82vh] mt-2 flex mb-10 " >
           <div className="hero-left w-[55%] h-full flex justify-center items-center">
             <div className="w-3/4 h-[95%] border rounded-xl p-5 px-2">
               <div className="msg w-full h-full bg-center bg-no-repeat bg-cover relative p-10">
@@ -265,7 +265,7 @@ function MeetUs() {
         </div>
 
         {/* PAGE 2 */}
-        <div className="page2 w-full h-screen mt-20 flex">
+        <div className="page2 w-full h-screen mt-20 flex relative">
           <div className="hero-left2 w-2/2 h-[95%] flex justify-center items-center">
             <div className="w-3/4 h-[95%] rounded-4xl border bg-cover bg-no-repeat"
               style={{ backgroundImage: "url('/Both Us/FrndGibli2.jpg')", objectFit: "cover" }}
@@ -286,10 +286,15 @@ function MeetUs() {
               </div>
             </div>
           </div>
+          <div className="blossom w-60 h-55  absolute bottom-10 left-3 bg-center bg-cover bg-no-repeat"
+            style={{ backgroundImage: "url('/flowers/simple2.png')", objectFit: "cover" }}
+          >
+          </div>
+
         </div>
 
         {/* PAGE 3 */}
-        <div className="page3 bg-[#fefae0] w-full h-[100vh] mt-20 flex">
+        <div className="page3 bg-[#fefae0] w-full h-[100vh] mt-20 flex relative">
           <div className="hero-left3 w-1/2 h-full flex justify-center items-center">
             <div className="msg-cont3 w-3/4 h-[90%] border rounded-xl px-6">
               <div className="msg w-full h-full bg-center bg-no-repeat bg-cover relative p-10">
@@ -310,7 +315,13 @@ function MeetUs() {
               style={{ backgroundImage: "url('/Both Us/Together 1.jpg')", objectFit: "cover" }}
             />
           </div>
+                <div className="blossom2 w-60 h-55  absolute bottom-10 right-3 bg-center bg-cover bg-no-repeat"
+            style={{ backgroundImage: "url('/flowers/simple1.png')", objectFit: "cover" }}
+          >
+
+          </div>
         </div>
+  
       </div>
 
 

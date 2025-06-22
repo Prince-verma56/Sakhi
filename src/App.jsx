@@ -7,6 +7,8 @@ import Navbar from './components/others/Navbar';
 import MeetUs from './pages/MeetUs';
 import Gratitude from './pages/Gratitude';
 import About from './pages/About';
+import Gallery from './pages/Gallery';
+import Memories from './pages/Memories';
 
 
 
@@ -23,8 +25,14 @@ const router = createBrowserRouter([
   {path:'/meet-us',
     element:<> <MeetUs/> </> 
   },
+  {path:'/gallery',
+    element:<> <Gallery/>  </> 
+  },
   {path:'/gratitude',
     element:<> <Gratitude/>  </> 
+  },
+  {path:'/memories',
+    element:<> <Memories/>  </> 
   },
   {path:'/about',
     element:<> <About/> </> 
