@@ -145,10 +145,7 @@ function Home() {
 
     gsap.from(".hero-right .img1-mam ", {
       y: -20,
-      height: 10,
-      // x:25,
-      scaleY: 0.3,
-      
+      scaleY: 0.5,
 
       duration: 0.9,
       opacity: 0,
