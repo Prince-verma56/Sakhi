@@ -153,7 +153,7 @@ function Home() {
       duration: 0.9,
       opacity: 0,
       delay: 1,
-      ease: "power.inOut",
+      ease: "power3.inOut",
       scrollTrigger: {
         trigger: ".page2",
         scroller: "body",
