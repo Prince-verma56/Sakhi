@@ -18,212 +18,26 @@ function Gratitude() {
 
     // Page1
 
+tl.from(".layer", { y: 60, opacity: 0, duration: 0.6, ease: "power3.out", stagger: 0.05 })
+  .from(".chars-text", { y: 60, opacity: 0, duration: 0.6, ease: "power3.out", stagger: 0.05 });
 
-    tl.from(".layer ", {
-      y: 60, // from below
-      opacity: 0,
-      duration: 0.6,
-      ease: "power3.out",
-      stagger: 0.05,
-    });
-    tl.from(".chars-text", {
-      y: 60, // from below
-      opacity: 0,
-      duration: 0.6,
-      ease: "power3.out",
-      stagger: 0.05,
-    });
+gsap.from(".page1 .hero-left2", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15, scrollTrigger: { trigger: ".page1", scroller: "body", start: "top 70%", end: "bottom 40%" } });
 
-    gsap.from(".page1 .hero-left2 ", {
-      height: 0,
-      y: 80,
+gsap.from(".page1 .from-stranger, .Stranger-cont", { y: 60, opacity: 0, duration: 2, delay: 0.7, scrub: 2, ease: "power3.out", stagger: 0.05, scrollTrigger: { trigger: ".page1", scroller: "body", start: "top 70%", end: "bottom 40%" } });
 
-      scaleY: 0.8,
-      opacity: 0,
-      // rotateY: 30,
-      duration: 1.4,
-      delay: 0.2,
-      ease: "power4.out",
-      stagger: 0.15,
-      scrollTrigger: {
-        trigger: ".page1",
-        scroller: "body",
-        start: "top 70%",
-        end: "bottom 40%",
-        //  markers:true
-      }
+gsap.from(".para-msg1", { y: 60, x: -19, opacity: 0, duration: 4, ease: "expo.inOut", stagger: 0.001, scrollTrigger: { trigger: ".page1", scroller: "body", start: "top 68%", end: "bottom 36%" } });
 
-    });
+gsap.from(".page2 .chulbuli", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15, scrollTrigger: { trigger: ".page2", scroller: "body", start: "top 70%", end: "bottom 40%" } });
 
-    gsap.from(".page1 .from-stranger ,.Stranger-cont ", {
-      y: 60, // from below
-      opacity: 0,
-      duration: 2,
-      delay: 0.7,
-      scrub: 2,
-      ease: "power3.out",
-      stagger: 0.05,
-      scrollTrigger: {
-        trigger: ".page1",
-        scroller: "body",
-        start: "top 70%",
-        end: "bottom 40%",
-        //  markers:true
-      }
+gsap.from(".page2 .to-current, .hero2-left", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15, scrollTrigger: { trigger: ".page2", scroller: "body", start: "top 70%", end: "bottom 40%" } });
 
-    });
+gsap.from(".para-msg2, .gold-line1", { y: 60, x: -19, opacity: 0, duration: 1.2, delay: 0.1, ease: "expo.inOut", scrub: 2, stagger: 0.03, scrollTrigger: { trigger: ".page2", scroller: "body", start: "top 70%", end: "bottom 40%" } });
 
-    gsap.from(".para-msg1 ", {
-      y: 60, // from below
-      x: -19,
+gsap.from(".page3 .Strong", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15, scrollTrigger: { trigger: ".page3", scroller: "body", start: "top 70%", end: "bottom 40%" } });
 
-      opacity: 0,
-      duration: 4,
-      ease: "expo.inOut",
-      stagger: 0.001,
-      scrollTrigger: {
-        trigger: ".page1",
-        scroller: "body",
-        start: "top 68%",
-        end: "bottom 36%",
-        //  markers:true
-      }
+gsap.from(".page3 .Silence", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15, scrollTrigger: { trigger: ".page3", scroller: "body", start: "top 65%", end: "bottom 36%" } });
 
-    });
-
-
-
-    //<------------ To Current Page --->
-
-
-
-
-    gsap.from(".page2 .chulbuli ", {
-      height: 0,
-      y: 80,
-
-      scaleY: 0.8,
-      opacity: 0,
-      // rotateY: 30,
-      duration: 1.4,
-      delay: 0.2,
-      ease: "power4.out",
-      stagger: 0.15,
-      scrollTrigger: {
-        trigger: ".page2",
-        scroller: "body",
-        start: "top 70%",
-        end: "bottom 40%",
-        // markers: true
-      }
-
-    });
-
-
-    gsap.from(".page2 .to-current , .hero2-left", {
-      height: 0,
-      y: 80,
-
-      scaleY: 0.8,
-      opacity: 0,
-      // rotateY: 30,
-      duration: 1.4,
-      delay: 0.2,
-      ease: "power4.out",
-      stagger: 0.15,
-      scrollTrigger: {
-        trigger: ".page2",
-        scroller: "body",
-        start: "top 70%",
-        end: "bottom 40%",
-        // markers: true
-      }
-
-    });
-
-    gsap.from(".para-msg2 , .gold-line1 ", {
-      y: 60, // from below
-      x: -19,
-      opacity: 0,
-      duration: 1.2,
-      delay: 0.1,
-      ease: "expo.inOut",
-      scrub: 2,
-      stagger: 0.03,
-      scrollTrigger: {
-        trigger: ".page2",
-        scroller: "body",
-        start: "top 70%",
-        end: "bottom 40%",
-        // markers: true
-      }
-    });
-
-
-
-    //<-------Silence Support -->
-
-    gsap.from(".page3 .Strong ", {
-      height: 0,
-      y: 80,
-
-      scaleY: 0.8,
-      opacity: 0,
-      // rotateY: 30,
-      duration: 1.4,
-      delay: 0.2,
-      ease: "power4.out",
-      stagger: 0.15,
-      scrollTrigger: {
-        trigger: ".page3",
-        scroller: "body",
-        start: "top 70%",
-        end: "bottom 40%",
-        // markers: true
-      }
-
-    });
-
-
-    gsap.from(".page3 .Silence", {
-      height: 0,
-      y: 80,
-
-      scaleY: 0.8,
-      opacity: 0,
-      // rotateY: 30,
-      duration: 1.4,
-      delay: 0.2,
-      ease: "power4.out",
-      stagger: 0.15,
-      scrollTrigger: {
-        trigger: ".page3",
-        scroller: "body",
-        start: "top 65%",
-        end: "bottom 36%",
-        // markers: true
-      }
-
-    });
-
-    gsap.from(".para-msg3 , .gold-line2  ", {
-      y: 60, // from below
-      x: -19,
-      opacity: 0,
-      duration: 1.2,
-      delay: 0.1,
-      ease: "expo.inOut",
-      scrub: 2,
-      stagger: 0.03,
-      scrollTrigger: {
-        trigger: ".page3",
-        scroller: "body",
-        start: "top 65%",
-        end: "bottom 37%",
-        // markers: true
-      }
-    });
-
+gsap.from(".para-msg3, .gold-line2", { y: 60, x: -19, opacity: 0, duration: 1.2, delay: 0.1, ease: "expo.inOut", scrub: 2, stagger: 0.03, scrollTrigger: { trigger: ".page3", scroller: "body", start: "top 65%", end: "bottom 37%" } });
 
 
 
