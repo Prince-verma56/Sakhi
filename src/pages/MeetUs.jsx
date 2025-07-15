@@ -30,200 +30,28 @@ function MeetUs() {
   const containerRef = useRef(null);
 
 
+useGSAP(() => {
+  gsap.registerPlugin(ScrollTrigger);
 
-  useGSAP(() => {
+  const tl = gsap.timeline();
+  
+  tl.from(".page1 .hero-right1", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15 }, "start");
+  tl.from(".page1 .hero-left", { height: 0, scaleX: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15 }, "start");
+  tl.from(".our-meet", { y: 60, opacity: 0, duration: 2, delay: 0.7, ease: "power3.out", stagger: 0.05 }, "start");
+  tl.from(".para-msg1", { y: 60, opacity: 0, duration: 0.6, delay: 0.1, ease: "power3.out", stagger: 0.03 }, "end");
 
-    const tl = gsap.timeline()
+  gsap.from(".page2 .hero-left2, .blossom", { height: 0, opacity: 0, duration: 1, ease: "power.inOut", stagger: 0.001, scrollTrigger: { trigger: ".page2", scroller: "body", start: "top 60%", end: "bottom 30%", scrub: 2 } });
 
+  gsap.from(".page2 .hero-right2, .msg-cont3", { height: 0, y: 80, x: 100, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15, scrollTrigger: { trigger: ".page2", scroller: "body", start: "top 60%", end: "bottom 30%", scrub: 2 } });
 
-    tl.from(".page1 .hero-right1", {
-      height: 0,
-      y: 80,
-      x: 0,
-      z: -2,
-      scaleY: 0.8,
-      opacity: 0,
-      // rotateY: 30,
-      duration: 1.4,
-      delay: 0.2,
-      ease: "power4.out",
-      stagger: 0.15,
-    }, "start")
+  gsap.from(".para-msg2", { y: 60, x: -19, opacity: 0, duration: 2, delay: 0.6, ease: "expo.inOut", stagger: 0.001, scrollTrigger: { trigger: ".page2", scroller: "body", start: "top 60%", end: "bottom 30%", scrub: 2 } });
 
-    tl.from(".page1 .hero-left", {
-      height: 0,
-      scaleX: 0,
-      y: 80,
-      x: 0,
-      z: -2,
-      scaleY: 0.8,
-      opacity: 0,
-      // rotateY: 30,
-      duration: 1.4,
-      delay: 0.2,
-      scrub: 2,
-      ease: "power4.out",
-      stagger: 0.15,
-    }, "start")
+  gsap.from(".page3 .hero-right3, .blossom2", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.3, delay: 0.2, ease: "power3.inOut", stagger: 0.15, scrollTrigger: { trigger: ".page3", scroller: "body", start: "top 60%", end: "bottom 30%", scrub: 2 } });
 
-    tl.from(".our-meet ", {
-      y: 60, // from below
-      opacity: 0,
-      duration: 2,
-      delay: 0.7,
-      scrub: 2,
-      ease: "power3.out",
-      stagger: 0.05,
-    }, "start")
+  gsap.from(".page3 .Going-on", { y: 60, opacity: 0, duration: 0.9, ease: "power3.out", stagger: 0.05, scrollTrigger: { trigger: ".page3", scroller: "body", start: "top 60%", end: "bottom 30%", scrub: 2 } });
 
-    tl.from(".para-msg1", {
-      y: 60, // from below
-      opacity: 0,
-      duration: 0.6,
-      delay: 0.1,
-      scrub: 2,
-      ease: "power3.out",
-      stagger: 0.03,
-    }, "end")
-
-
-
-
-    // Second Page
-
-    gsap.from(".page2 .hero-left2 , .blossom", {
-
-      height: 0,
-      opacity: 0,
-      duration: 1,
-      ease: "power.inOut",
-      scrub: 2,
-      stagger: 0.001,
-      scrollTrigger: {
-        // markers: true,
-        trigger: ".page2",
-        scroller: "body",
-        start: "top 60%",
-        end: "bottom 30%"
-
-      }
-    })
-
-    gsap.from(".page2 .hero-right2 , .msg-cont3", {
-      height: 0,
-
-      y: 80,
-      x: 100,
-      z: -2,
-      scaleY: 0.8,
-      opacity: 0,
-      // rotateY: 30,
-      duration: 1.4,
-      delay: 0.2,
-      ease: "power4.out",
-      scrub: 2,
-      stagger: 0.15,
-      scrollTrigger: {
-        // markers: true,
-        trigger: ".page2",
-        scroller: "body",
-        start: "top 60%",
-        end: "bottom 30%"
-
-      }
-    }, "start")
-
-
-    gsap.from(".para-msg2", {
-      y: 60, // from below
-      x: -19,
-      opacity: 0,
-      duration: 2,
-      delay: 0.6,
-      ease: "expo.inOut",
-      stagger: 0.001,
-      scrollTrigger: {
-        // markers: true,
-        trigger: ".page2",
-        scroller: "body",
-        start: "top 60%",
-        end: "bottom 30%"
-
-      }
-    })
-
-
-
-
-
-    //Page 3 Animations
-
-
-
-
-
-    gsap.from(".page3 .hero-right3 , .blossom2", {
-      height: 0,
-      y: 80,
-      x: 0,
-      z: -2,
-      scaleY: 0.8,
-      opacity: 0,
-      // rotateY: 30,
-      duration: 1.3,
-      delay: 0.2,
-      ease: "power3.inOut",
-      scrub: 2,
-      stagger: 0.15,
-      scrollTrigger: {
-        // markers: true,
-        trigger: ".page3",
-        scroller: "body",
-        start: "top 60%",
-        end: "bottom 30%"
-
-      }
-    }, "start")
-
-    gsap.from(".page3 .Going-on", {
-      y: 60, // from below
-      opacity: 0,
-      duration: 0.9,
-      ease: "power3.out",
-      scrub: 2,
-      stagger: 0.05,
-      scrollTrigger: {
-        // markers: true,
-        trigger: ".page3",
-        scroller: "body",
-        start: "top 60%",
-        end: "bottom 30%"
-
-      }
-    })
-
-    gsap.from(".para-msg3", {
-      y: 60, // from below
-      x: -19,
-      opacity: 0,
-      duration: 1.2,
-      delay: 0.1,
-      ease: "expo.inOut",
-      scrub: 2,
-      stagger: 0.03,
-      scrollTrigger: {
-        // markers: true,
-        trigger: ".page3",
-        scroller: "body",
-        start: "top 60%",
-        end: "bottom 30%"
-
-      }
-    }, "end")
-
-
-
-  })
+  gsap.from(".para-msg3", { y: 60, x: -19, opacity: 0, duration: 1.2, delay: 0.1, ease: "expo.inOut", stagger: 0.03, scrollTrigger: { trigger: ".page3", scroller: "body", start: "top 60%", end: "bottom 30%", scrub: 2 } });
+});
 
 
   return (

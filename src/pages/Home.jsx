@@ -290,22 +290,7 @@ function Home() {
 
       }
     })
-    gsap.from(".page4 #falling-text", {
-      opacity: 0,
-
-      duration: 1.5,
-      ease: "power3.inOut",
-      stagger: true,
-      scrollTrigger: {
-        trigger: ".page4",
-        scroller: "body",
-        // markers: true,
-        start: "top 55%",
-        end: "top 35%",
-        toggleActions: "play none none reverse", // (optional) Controls animation behavior
-
-      }
-    })
+   
 
 
     gsap.from(".page5 .slider-heading2 , .Spring-flowers2  ", {
@@ -362,7 +347,7 @@ function Home() {
 
       }
     })
-    gsap.from(".page5 >.end-msg1", {
+    gsap.from(".page5 .end-msg1", {
       y: 60, // from below
       opacity: 0,
       duration: 2,
