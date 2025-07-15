@@ -18,26 +18,26 @@ function Gratitude() {
 
     // Page1
 
-tl.from(".layer", { y: 60, opacity: 0, duration: 0.6, ease: "power3.out", stagger: 0.05 })
-  .from(".chars-text", { y: 60, opacity: 0, duration: 0.6, ease: "power3.out", stagger: 0.05 });
+    tl.from(".layer", { y: 60, opacity: 0, duration: 0.6, ease: "power3.out", stagger: 0.05 })
+      .from(".chars-text", { y: 60, opacity: 0, duration: 0.6, ease: "power3.out", stagger: 0.05 });
 
-gsap.from(".page1 .hero-left2", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15, scrollTrigger: { trigger: ".page1", scroller: "body", start: "top 70%", end: "bottom 40%" } });
+    gsap.from(".page1 .hero-left2", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15, scrollTrigger: { trigger: ".page1", scroller: "body", start: "top 70%", end: "bottom 40%" } });
 
-gsap.from(".page1 .from-stranger, .Stranger-cont", { y: 60, opacity: 0, duration: 2, delay: 0.7, scrub: 2, ease: "power3.out", stagger: 0.05, scrollTrigger: { trigger: ".page1", scroller: "body", start: "top 70%", end: "bottom 40%" } });
+    gsap.from(".page1 .from-stranger, .Stranger-cont", { y: 60, opacity: 0, duration: 2, delay: 0.7, scrub: 2, ease: "power3.out", stagger: 0.05, scrollTrigger: { trigger: ".page1", scroller: "body", start: "top 70%", end: "bottom 40%" } });
 
-gsap.from(".para-msg1", { y: 60, x: -19, opacity: 0, duration: 4, ease: "expo.inOut", stagger: 0.001, scrollTrigger: { trigger: ".page1", scroller: "body", start: "top 68%", end: "bottom 36%" } });
+    gsap.from(".para-msg1", { y: 60, x: -19, opacity: 0, duration: 4, ease: "expo.inOut", stagger: 0.001, scrollTrigger: { trigger: ".page1", scroller: "body", start: "top 68%", end: "bottom 36%" } });
 
-gsap.from(".page2 .chulbuli", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15, scrollTrigger: { trigger: ".page2", scroller: "body", start: "top 70%", end: "bottom 40%" } });
+    gsap.from(".page2 .chulbuli", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15, scrollTrigger: { trigger: ".page2", scroller: "body", start: "top 70%", end: "bottom 40%" } });
 
-gsap.from(".page2 .to-current, .hero2-left", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15, scrollTrigger: { trigger: ".page2", scroller: "body", start: "top 70%", end: "bottom 40%" } });
+    gsap.from(".page2 .to-current, .hero2-left", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15, scrollTrigger: { trigger: ".page2", scroller: "body", start: "top 70%", end: "bottom 40%" } });
 
-gsap.from(".para-msg2, .gold-line1", { y: 60, x: -19, opacity: 0, duration: 1.2, delay: 0.1, ease: "expo.inOut", scrub: 2, stagger: 0.03, scrollTrigger: { trigger: ".page2", scroller: "body", start: "top 70%", end: "bottom 40%" } });
+    gsap.from(".para-msg2, .gold-line1", { y: 60, x: -19, opacity: 0, duration: 1.2, delay: 0.1, ease: "expo.inOut", scrub: 2, stagger: 0.03, scrollTrigger: { trigger: ".page2", scroller: "body", start: "top 70%", end: "bottom 40%" } });
 
-gsap.from(".page3 .Strong", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15, scrollTrigger: { trigger: ".page3", scroller: "body", start: "top 70%", end: "bottom 40%" } });
+    gsap.from(".page3 .Strong", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15, scrollTrigger: { trigger: ".page3", scroller: "body", start: "top 70%", end: "bottom 40%" } });
 
-gsap.from(".page3 .Silence", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15, scrollTrigger: { trigger: ".page3", scroller: "body", start: "top 65%", end: "bottom 36%" } });
+    gsap.from(".page3 .Silence", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1.4, delay: 0.2, ease: "power4.out", stagger: 0.15, scrollTrigger: { trigger: ".page3", scroller: "body", start: "top 65%", end: "bottom 36%" } });
 
-gsap.from(".para-msg3, .gold-line2", { y: 60, x: -19, opacity: 0, duration: 1.2, delay: 0.1, ease: "expo.inOut", scrub: 2, stagger: 0.03, scrollTrigger: { trigger: ".page3", scroller: "body", start: "top 65%", end: "bottom 37%" } });
+    gsap.from(".para-msg3, .gold-line2", { y: 60, x: -19, opacity: 0, duration: 1.2, delay: 0.1, ease: "expo.inOut", scrub: 2, stagger: 0.03, scrollTrigger: { trigger: ".page3", scroller: "body", start: "top 65%", end: "bottom 37%" } });
 
 
 
@@ -88,18 +88,20 @@ gsap.from(".para-msg3, .gold-line2", { y: 60, x: -19, opacity: 0, duration: 1.2,
                   <h1 className="from-stranger text-center text-6xl font-bold font-mono text-[#958c23]">
                     From Stranger
                   </h1>
-                  <p className="leading-[1.7em] good-para text-black font-mono mt-10">
-                    {"It all started with a simple birthday wish — just a heartfelt message at 2:05 AM, not knowing that it would lead to something so genuine. At that time, I had no idea we'd even talk this much. Honestly, I was nervous before sending that message — thinking how strange it felt since we had never even spoken or met before. But then I reminded myself, she’s also just a person, like me. Slowly, from that one text, a beautiful bond began to grow — full of warmth, kindness, comfort, and an unexpected yet priceless friendship that now feels like it was always meant to be."
-                      .split("")
-                      .map((char, idx) => (
-                        <span key={idx} className="para-msg1 inline-block">
-                          {char === " " ? "\u00A0" : char}
+
+                  <p className="leading-[1.9em] good-para text-black font-mono mt-10 flex flex-wrap">
+                    {"It all started with a simple birthday wish 🎂 — just a heartfelt message at 2:05 AM ⏰, not knowing that it would lead to something so genuine ✨.At that time, I had no idea we'd even talk this much 🤝. Honestly, I was nervous before sending that message  — thinking how strange it felt since we had never even spoken or met before .But then I reminded myself, she’s also just a person, like me 🌱.Slowly, from that one text 💬, a beautiful bond began to grow 🌸 — full of warmth ☀️, kindness 💖, comfort 🫶, and an unexpected yet priceless friendship that now feels like it was always meant to be 🌈."
+                      .split(" ")
+                      .map((word, idx) => (
+                        <span key={idx} className="para-msg1 inline-block mr-1">
+                          {word}
                         </span>
                       ))}
                   </p>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
         <div className="gold-line1 w-[80%] mx-30 h-20 flex justify-center items-center mt-20">
@@ -110,18 +112,29 @@ gsap.from(".para-msg3, .gold-line2", { y: 60, x: -19, opacity: 0, duration: 1.2,
           <div className="hero w-[90%] h-[95%] mx-auto flex justify-between items-center gap-6 px-4">
 
             {/* LEFT SIDE (Text) */}
-            <div className="hero2-left w-1/2 h-[95%] p-10 border rounded-lg">
-              <h1 className="to-current text-center text-6xl font-bold font-mono text-[#958c23]">
-                To Current
-              </h1>
-              <p className="para-msg2 leading-[1.7em] text-black font-mono mt-10 w-[88%]">
-                {"Woh sirf sweet nahi hai — usme thoda drama, thodi si sass, aur poori duniya jitni care chhupi hui hai. Jaise hi baat karte waqt ladti hai, taang khinchti hai, aur fir end mein ek chhoti si concern bhari line bolti hai — bas wahi uski asli vibe hai. Kabhi kehti hai “ab to baat hi nahi karungi,” fir 2 minute baad “oye sun na” kehke wapas aa jaati hai. Uska “chup chap reh” bolna bhi pyaar jaisa lagta hai. Har conversation mein kabhi hasa deti hai, kabhi confuse karti hai, aur fir ekdum se dil ko sukoon de deti hai. Aur fir end hamesha wahi hota hai — “ab bta kya khaya aaj?” — jaise sab kuch thik ho gaya ho. ".split("").map((char, idx) => (
-                  <span key={idx} className="para-msg2 inline-block">
-                    {char === " " ? "\u00A0" : char}
-                  </span>
-                ))}
-              </p>
+            <div className="hero2-left w-1/2 h-[95%] p-10 border rounded-lg flex justify-center items-center">
+              <div className="text-area w-[88%] max-w-[650px] text-center">
+                <h1 className="to-current text-6xl font-bold font-mono text-[#958c23] mb-8">
+                  To Current
+                </h1>
+
+                <p className="para-msg2 leading-[1.7em] text-black font-mono flex flex-wrap justify-center gap-[4px]">
+                  {"Woh sirf sweet nahi hai 🍬 — usme thoda drama 🎭, thodi si sass 😏, aur poori duniya jitni care chhupi hui hai 💖. Jaise hi baat karte waqt ladti hai 🤭, taang khinchti hai 😜, aur fir end mein ek chhoti si concern bhari line bolti hai 🫶 — bas wahi uski asli vibe hai ✨. Kabhi kehti hai “ab to baat hi nahi karungi” 🙅‍♀️, fir 2 minute baad “oye sun na” kehke wapas aa jaati hai 😅. Uska “chup chap reh” bolna bhi pyaar jaisa lagta hai 🫂. Har conversation mein kabhi hasa deti hai 😂, kabhi confuse karti hai 🤔, aur fir ekdum se dil ko sukoon de deti hai 🌿. Aur fir end hamesha wahi hota hai — “ab bta kya khaya aaj?” 🍽️ — jaise sab kuch thik ho gaya ho 😊."
+                    .split(" ")
+                    .map((word, idx) => (
+                      <span key={idx} className="inline-flex">
+                        {Array.from(word).map((char, cIdx) => (
+                          <span key={cIdx} className="para-msg2 inline-block">
+                            {char}
+                          </span>
+                        ))}
+                      </span>
+                    ))}
+                </p>
+              </div>
             </div>
+
+
 
 
             {/* RIGHT SIDE (Image) */}
@@ -155,24 +168,30 @@ gsap.from(".para-msg3, .gold-line2", { y: 60, x: -19, opacity: 0, duration: 1.2,
             </div>
 
             {/* Right Text */}
-            <div className="hero-right3 w-1/2 h-full mt-5">
-              <div className="w-[90%] h-[95%] border rounded-xl px-6">
-                <div className="msg w-full h-full bg-center bg-no-repeat bg-cover relative p-10 px-7">
-                  <h1 className="Silence text-center text-4xl font-bold font-mono text-[#958c23] leading-tight">
+            <div className="hero-right3 w-1/2 h-full mt-5 flex justify-center items-center">
+              <div className="w-[90%] h-[95%] border rounded-xl px-6 flex justify-center items-center">
+                <div className="msg w-full h-full bg-center bg-no-repeat bg-cover relative p-10 px-7 max-w-[650px] text-center">
+                  <h1 className="Silence text-4xl font-bold font-mono text-[#958c23] leading-tight mb-8">
                     "Silent Support,<br />Loud Impact"
                   </h1>
-                  <p className="para-msg3 leading-[2em] good-para text-black font-mono mt-10 w-full">
-                    {"In moments when I felt completely drained — when all the effort, sleepless nights, and failure made me question myself — she stood by me like a wall of belief. Her words reminded me of my strength, even when I couldn’t see it. She didn’t just say she believed in me — she meant it. That quiet faith ✨, that gentle pride in her voice, was enough to help me hold on and keep moving forward."
-                      .split("")
-                      .map((char, idx) => (
-                        <span key={idx} className="para-msg3 inline-block">
-                          {char === " " ? "\u00A0" : char}
+
+                  <p className="para-msg3 leading-[2em] good-para text-black font-mono flex flex-wrap justify-center gap-[4px]">
+                    {"In moments when I felt completely drained 💤 — when all the effort, sleepless nights 🌙, and failure 💔 made me question myself  — she stood by me like a wall of belief 🧱. Her words reminded me of my strength 💪, even when I couldn’t see it 🙇‍♂️. She didn’t just say she believed in me — she meant it 🫶. That quiet faith ✨, that gentle pride in her voice , was enough to help me hold on and keep moving forward 🚀."
+                      .split(" ")
+                      .map((word, idx) => (
+                        <span key={idx} className="inline-flex">
+                          {Array.from(word).map((char, cIdx) => (
+                            <span key={cIdx} className="para-msg3 inline-block">
+                              {char}
+                            </span>
+                          ))}
                         </span>
                       ))}
                   </p>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>

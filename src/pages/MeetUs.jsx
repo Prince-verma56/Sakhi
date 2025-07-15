@@ -234,11 +234,12 @@ function MeetUs() {
         <SnowflakeCursor />
 
         {/* PAGE 1 */}
-        <div className="page1 w-full h-[82vh] mt-2 flex mb-10 " >
+        <div className="page1 w-full h-[82vh] mt-2 flex mb-10">
           <div className="hero-left w-[55%] h-full flex justify-center items-center">
-            <div className="w-3/4 h-[95%] border rounded-xl p-5 px-2">
-              <div className="msg w-full h-full bg-center bg-no-repeat bg-cover relative p-10">
-                <h1 className='our-meet text-6xl font-mono font-bold'>
+            <div className="w-3/4 h-[95%] border rounded-xl p-5 px-2 flex justify-center items-center">
+              <div className="msg w-full h-full bg-center bg-no-repeat bg-cover relative p-10 max-w-[650px] text-center flex flex-col justify-center items-center">
+
+                <h1 className='our-meet text-6xl font-mono font-bold mb-8'>
                   {"Our Meet".split("").map((char, idx) => (
                     <span key={idx} className="chars-text inline-block text-[#847B1A]">
                       {char === " " ? "\u00A0" : char}
@@ -246,23 +247,33 @@ function MeetUs() {
                   ))}
                 </h1>
 
-                <p className='leading-[2em] good-para text-black font-mono mt-10 w-[100%]'>
-                  {"We never even imagined that one day we’d talk to each other. I was always buried in my own world — the quiet, studious type, barely speaking to anyone. But ever since we met, things began to change. A friendship slowly bloomed, filled with silent understanding, sweet conversations, and a bond that speaks even when words don’t. We went from strangers to comfort zones. There’s a warmth in your presence, a calm in our connection — something I didn’t know I needed. ".split("").map((char, idx) => (
-                    <span key={idx} className="para-msg1 inline-block">
-                      {char === " " ? "\u00A0" : char}
-                    </span>
-                  ))}
+                <p className='leading-[2em] good-para text-black font-mono flex flex-wrap justify-center gap-[4px] max-w-[600px]'>
+                  {"We never even imagined that one day we’d talk to each other 🤝. I was always buried in my own world 📚 — the quiet, studious type 🙇‍♂️, barely speaking to anyone 🤐. But ever since we met, things began to change 🌱. A friendship slowly bloomed 🌸, filled with silent understanding 🤫, sweet conversations 🍫, and a bond that speaks even when words don’t 🫂. We went from strangers to comfort zones 🏡. There’s a warmth in your presence ☀️, a calm in our connection 🌊 — something I didn’t know I needed 💖."
+                    .split(" ")
+                    .map((word, idx) => (
+                      <span key={idx} className="inline-flex">
+                        {Array.from(word).map((char, cIdx) => (
+                          <span key={cIdx} className="para-msg1 inline-block">
+                            {char}
+                          </span>
+                        ))}
+                      </span>
+                    ))}
                 </p>
+
               </div>
             </div>
           </div>
 
+
           <div className="hero-right1 w-1/2 h-full flex justify-center items-center">
-            <div className="w-3/4 h-[97%] rounded-4xl border bg-cover bg-no-repeat"
+            <div
+              className="w-3/4 h-[97%] rounded-4xl border bg-cover bg-no-repeat"
               style={{ backgroundImage: "url('/Both Us/FrndGibli.jpg')" }}
             />
           </div>
         </div>
+
 
         {/* PAGE 2 */}
         <div className="page2 w-full h-screen mt-20 flex relative">
@@ -273,23 +284,35 @@ function MeetUs() {
           </div>
 
           <div className="hero-right2 w-[50%] h-[90%] flex justify-center items-center">
-            <div className="w-full h-full border px-6 rounded-4xl">
-              <div className="msg w-full h-full bg-center bg-no-repeat bg-cover relative p-10">
-                <h1 className='text-center text-6xl font-bold font-mono text-[#958c23]'>Supportive</h1>
-                <p className='leading-[1.7em] good-para text-black font-mono mt-10'>
-                  {"She may not be deeply into tech like me, but her nature is what truly stands out. She's incredibly supportive — always ready to listen, to understand, and to stand by me even when she doesn’t fully get what I’m working on. It’s the little things she does — showing up, encouraging me, staying curious — that mean the most. During our last hackathon together, it wasn’t her skills, but her kindness, patience, and presence that made everything special. ".split("").map((char, idx) => (
-                    <span key={idx} className="para-msg2 inline-block">
-                      {char === " " ? "\u00A0" : char}
-                    </span>
-                  ))}
+            <div className="w-full h-full border px-6 rounded-4xl flex justify-center items-center">
+              <div className="msg w-full h-full bg-center bg-no-repeat bg-cover relative p-10 max-w-[650px] text-center">
+                <h1 className='text-6xl font-bold font-mono text-[#958c23] mb-8'>
+                  Supportive
+                </h1>
+
+                <p className='leading-[1.7em] good-para text-black font-mono flex flex-wrap justify-center gap-[4px]'>
+                  {"She may not be deeply into tech like me , but her nature is what truly stands out ✨. She's incredibly supportive 🤝 — always ready to listen 👂, to understand 🧠, and to stand by me even when she doesn’t fully get what I’m working on. It’s the little things she does — showing up 🚪, encouraging me 💬, staying curious ❓— that mean the most. During our last hackathon together , it wasn’t her skills, but her kindness 💖, patience 🕊️, and presence 👥 that made everything special 🌟."
+                    .split(" ")
+                    .map((word, idx) => (
+                      <span key={idx} className="inline-flex">
+                        {Array.from(word).map((char, cIdx) => (
+                          <span key={cIdx} className="para-msg2 inline-block">
+                            {char}
+                          </span>
+                        ))}
+                      </span>
+                    ))}
                 </p>
               </div>
             </div>
           </div>
-          <div className="blossom w-60 h-55  absolute bottom-10 left-3 bg-center bg-cover bg-no-repeat"
+
+
+          <div
+            className="blossom w-60 h-55 absolute bottom-10 left-3 bg-center bg-cover bg-no-repeat"
             style={{ backgroundImage: "url('/flowers/simple2.png')", objectFit: "cover" }}
-          >
-          </div>
+          ></div>
+
 
         </div>
 
@@ -298,30 +321,42 @@ function MeetUs() {
           <div className="hero-left3 w-1/2 h-full flex justify-center items-center">
             <div className="msg-cont3 w-3/4 h-[90%] border rounded-xl px-6">
               <div className="msg w-full h-full bg-center bg-no-repeat bg-cover relative p-10">
-                <h1 className='Going-on text-center text-4xl font-bold font-mono text-[#958c23]'>and It's Going On..</h1>
-                <p className='leading-[2em] good-para text-black font-mono mt-10 '>
-                  {"We never even imagined that one day we’d talk to each other. I was always buried in my own world — the quiet, studious type, barely speaking to anyone. But ever since we met, things began to change. A friendship slowly bloomed, filled with silent understanding, sweet conversations, and a bond that speaks even when words don’t. We went from strangers to comfort zones. There’s a warmth in your presence, a calm in our connection — something I didn’t know I needed.".split("").map((char, idx) => (
-                    <span key={idx} className="para-msg3 inline-block">
-                      {char === " " ? "\u00A0" : char}
-                    </span>
-                  ))}
+                <h1 className='Going-on text-center text-4xl font-bold font-mono text-[#958c23]'>
+                  and It's Going On..
+                </h1>
+
+                <p className='leading-[2em] good-para text-black font-mono mt-10 flex flex-wrap justify-center gap-[4px] max-w-[600px]'>
+                  {"Some bonds don’t come with a deadline 🕰️— they just flow, day by day, message by message 📲, memory by memory 📸. We still tease each other, still share the tiniest updates of our day 🍽️, still argue over silly things 🙃, and still end up laughing about it all . There’s no official tag to this, no big promises — just two people, still choosing to stay connected 🤝, still being there in the most real and simple ways. And maybe that’s what makes it special — it’s still going on, effortlessly 🚶‍♂️🚶‍♀️💬."
+                    .split(" ")
+                    .map((word, idx) => (
+                      <span key={idx} className="inline-flex">
+                        {Array.from(word).map((char, cIdx) => (
+                          <span key={cIdx} className="para-msg3 inline-block">
+                            {char}
+                          </span>
+                        ))}
+                      </span>
+                    ))}
                 </p>
+
               </div>
             </div>
           </div>
 
           <div className="hero-right3 w-1/2 h-[100vh] flex justify-center items-center">
-            <div className="w-3/4 h-[90%] rounded-4xl border bg-cover bg-no-repeat bg-center"
+            <div
+              className="w-3/4 h-[90%] rounded-4xl border bg-cover bg-no-repeat bg-center"
               style={{ backgroundImage: "url('/Both Us/Together 1.jpg')", objectFit: "cover" }}
             />
           </div>
-                <div className="blossom2 w-60 h-55  absolute bottom-10 right-3 bg-center bg-cover bg-no-repeat"
-            style={{ backgroundImage: "url('/flowers/simple1.png')", objectFit: "cover" }}
-          >
 
-          </div>
+          <div
+            className="blossom2 w-60 h-55 absolute bottom-10 right-3 bg-center bg-cover bg-no-repeat"
+            style={{ backgroundImage: "url('/flowers/simple1.png')", objectFit: "cover" }}
+          />
         </div>
-  
+
+
       </div>
 
 
