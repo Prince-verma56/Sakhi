@@ -20,8 +20,8 @@ function Gallery() {
             .from(".page1-main .hero-left1", { y: 10, opacity: 0, height: 0, ease: "ease.inOut", duration: 1.2 });
 
         // FIXED Page2 Animation
-        gsap.from(".page2 ", { opacity: 0, duration: 0.8, ease: "power3.out", scrollTrigger: { trigger: ".page2", start: "top 80%", end: "bottom 50%", markers: true, toggleActions: "play reverse play reverse" } }); ScrollTrigger.refresh();
-        gsap.from(".page2 .image-area", { height: 0, opacity: 0, y: 50, duration: 1, ease: "power3.out", scrollTrigger: { trigger: ".page2", start: "top 50%", end: "bottom top", markers: true, toggleActions: "play reverse play reverse" } }); ScrollTrigger.refresh();
+        gsap.from(".page2 ", { opacity: 0, duration: 0.8, ease: "power3.out", scrollTrigger: { trigger: ".page2", start: "top 80%", end: "bottom 50%",  toggleActions: "play reverse play reverse" } }); ScrollTrigger.refresh();
+        gsap.from(".page2 .image-area", { height: 0, opacity: 0, y: 50, duration: 1, ease: "power3.out", scrollTrigger: { trigger: ".page2", start: "top 50%", end: "bottom top",  toggleActions: "play reverse play reverse" } }); ScrollTrigger.refresh();
 
     }, []);
     return (
