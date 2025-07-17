@@ -49,7 +49,7 @@ function Gallery() {
                     style={{ backgroundImage: "url('/backgrounds/Staionary.png')", objectFit: "cover" }}>
                     <div className="hero relative w-[90%] h-[95%] m-auto flex justify-around px-10 py-1 ">
                         <div className="hero-left1 w-[45%] h-[95%] flex items-end justify-center -translate-y-20 relative top-4 left-12">
-                            <div className="shadow-[-12px_10px_46px_0px_#ffba08] w-[80%] h-[100%] rounded-3xl overflow-hidden border-2 border-white bg-center bg-cover flex items-center justify-center absolute top-10 left-20"
+                            <div className="shadow-[-12px_10px_46px_0px_#ffba08] w-[80%] h-[95%] rounded-3xl overflow-hidden border-2 border-white bg-center bg-cover flex items-center justify-center absolute top-10 left-20"
                                 style={{ backgroundImage: "url('/Dishes/Maal Pua 2.jpg')", objectFit: "cover", backgroundPosition: "center" }}>
                             </div>
                         </div>
