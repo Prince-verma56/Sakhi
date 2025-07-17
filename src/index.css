@@ -5,11 +5,14 @@
     --bg-color:#fefae0;
 }
 
+::selection{
+  color: white;
+  background-color: rgb(155, 118, 53);
+}
 
 .active-link{
   border-bottom: 2px solid rgb(176, 195, 32);
 }
-
 
 
 @font-face {

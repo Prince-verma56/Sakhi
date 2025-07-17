@@ -1,11 +1,11 @@
 
 import React, { useEffect, useRef } from 'react';
-const SnowflakeCursor2 = ({ element }) => {
+const SnowflakeCursor = ({ element }) => {
   const canvasRef = useRef(null);
   const particles = useRef([]);
   const canvImages = useRef([]);
   const animationFrame = useRef(null);
-  const possibleEmoji = ['🩷'];
+  const possibleEmoji = ['🍁'];
   const prefersReducedMotion = useRef(null);
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -138,4 +138,4 @@ class Particle {
     context.restore();
   }
 }
-export default SnowflakeCursor2;
+export default SnowflakeCursor;
