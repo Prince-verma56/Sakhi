@@ -401,12 +401,12 @@ function Home() {
               </div>
 
               <div className="layer-1 w-full h-[80%] absolute bottom-[-6%] z-10 flex justify-between">
-                <div className="left-flower"><img src="/flowers/Left_flower.png" alt="" /></div>
-                <div className="left-flower"><img src="/flowers/Left_flower.png" className='rotate-y-180' alt="" /></div>
+                <div className="left-flower"><img src="/flowers/Left_flower.png" loading='lazy' alt="" /></div>
+                <div className="left-flower"><img src="/flowers/Left_flower.png" loading='lazy' className='rotate-y-180' alt="" /></div>
               </div>
 
               <div className="layer-2 w-full h-[88%] flex justify-center top-[11%] absolute bottom-[-5%] left-0 z-[10]">
-                <img src="/flowers/Spring2.png" className='h-full w-full z-20 absolute bottom-0 left-[0%]' alt="" />
+                <img src="/flowers/Spring2.png" className='h-full w-full z-20 absolute bottom-0 left-[0%]' loading='lazy' alt="" />
               </div>
             </div>
           </div>
@@ -433,6 +433,7 @@ function Home() {
                   src="/madam/Frame 1.png"
                   className="w-[70%] img1-mam h-auto object-cover rounded-tl-[150px] rounded-tr-[150px]"
                   alt="Diksha Mam"
+                  loading='lazy'
                 />
               </div>
             </div>
@@ -455,11 +456,11 @@ function Home() {
         </div>
 
         <div className="gold-line w-[80%] mx-30 h-20 flex justify-center items-center mt-20">
-          <img src="/Lines/LineCom 2.png" width={1000} alt="" />
+          <img src="/Lines/LineCom 2.png" width={1000} alt=""  loading='lazy'/>
         </div>
 
         <div className="page4 w-full h-[140vh] mt-20 relative bg-no-repeat bg-cover">
-          <img src="/flowers/Flower_bg.jpg" className='w-full h-full object-fit bg-cover absolute top-0 left-0 right-0' alt="" />
+          <img src="/flowers/Flower_bg.jpg" loading='lazy' className='w-full h-full object-fit bg-cover absolute top-0 left-0 right-0' alt="" />
 
           <div className="falling-text absolute left-0 top-0 z-[1] h-full w-full">
             <FallingText id="falling-text" />

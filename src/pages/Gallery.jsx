@@ -8,10 +8,10 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger);
 
 function Gallery() {
-
     useGSAP(() => {
         const tl = gsap.timeline();
 
+        // Page 1 animations
         tl.from(".page1 .cook-title", { y: 40, opacity: 0, duration: 1, skewX: -40, skewY: 5, ease: "power3.out", stagger: 0.2 })
             .from(".gold-line1", { y: 40, opacity: 0, scaleX: 0, ease: "power3.out", duration: 1, stagger: 0.2 })
             .from(".page1-main", { opacity: 0 }, "-=0.5")
@@ -19,11 +19,108 @@ function Gallery() {
             .from(".page1-main .her-react", { height: 0, y: 80, scaleY: 0.8, opacity: 0, duration: 1, ease: "power4.out", stagger: 0.15 }, "-=0.5")
             .from(".page1-main .hero-left1", { y: 10, opacity: 0, height: 0, ease: "ease.inOut", duration: 1.2 });
 
-        // FIXED Page2 Animation
-        gsap.from(".page2 ", { opacity: 0, duration: 0.8, ease: "power3.out", scrollTrigger: { trigger: ".page2", start: "top 80%", end: "bottom 50%",  toggleActions: "play reverse play reverse" } }); ScrollTrigger.refresh();
-        gsap.from(".page2 .image-area", { height: 0, opacity: 0, y: 50, duration: 1, ease: "power3.out", scrollTrigger: { trigger: ".page2", start: "top 50%", end: "bottom top",  toggleActions: "play reverse play reverse" } }); ScrollTrigger.refresh();
+        // Page 2 animations
+        gsap.from(".page2", {
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".page2",
+                start: "top 80%",
+                end: "bottom 50%",
+                toggleActions: "play reverse play reverse"
+            }
+        });
+
+        gsap.from(".page2 .image-area", {
+            height: 0,
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".page2",
+                start: "top 50%",
+                end: "bottom top",
+                toggleActions: "play reverse play reverse"
+            }
+        });
+
+        const sections = gsap.utils.toArray(".horizontal-slide");
+        const title = document.querySelector(".scroll-title");
+
+        // Title fade-in when Page3 starts
+        gsap.fromTo(".scroll-title",
+            { y: -50, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".page3",
+                    start: "top center",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
+
+        // Horizontal slides animation
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".page3",
+                pin: true,
+                scrub: 1,
+                end: () =>
+                    "+=" + document.querySelector(".horizontal-wrapper").scrollWidth,
+            },
+        });
+
+        // Title horizontal movement synced with slides
+        gsap.to(title, {
+            x: () =>
+                -(document.querySelector(".horizontal-wrapper").scrollWidth - window.innerWidth),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".page3",
+                start: "top top",
+                scrub: 1,
+                end: () =>
+                    "+=" + document.querySelector(".horizontal-wrapper").scrollWidth,
+            },
+        });
+
+        // Fade out after Page3 ends
+        gsap.to(".scroll-title", {
+            opacity: 0,
+            scrollTrigger: {
+                trigger: ".page3",
+                start: "bottom bottom",
+                toggleActions: "play none none reverse"
+            }
+        });
+
+        // ✨ Images reveal animation
+        gsap.from(".horizontal-slide img", {
+            opacity: 0,
+            scale: 0.9,
+            y: 50,
+            duration: 1,
+            stagger: 0.5,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".page3",
+                start: "top top",
+                scrub: 1,
+                end: () =>
+                    "+=" + document.querySelector(".horizontal-wrapper").scrollWidth,
+            },
+        });
 
     }, []);
+
     return (
         <>
             <BadamFlake />
@@ -42,7 +139,7 @@ function Gallery() {
                 </div>
 
                 <div className="gold-line1 w-[80%] mx-30 h-20 flex justify-center items-center mt-1">
-                    <img src="/Lines/LineCom 2.png" width={1000} alt="" />
+                    <img src="/Lines/LineCom 2.png" width={1000} alt="" loading='lazy' />
                 </div>
 
                 <div className="page1-main h-screen w-full mt-2 px-4 bg-center bg-no-repeat bg-cover select-none pointer-events-none"
@@ -57,7 +154,6 @@ function Gallery() {
                         <div className="iso-leave1 absolute w-40 h-40 right-12"
                             style={{ backgroundImage: "url('/Dishes/Iso-leaves3.png')", backgroundSize: "cover", backgroundPosition: "center" }}
                         ></div>
-
 
                         <div className="hero-right1 w-1/2 h-full relative">
                             <div className="Bite-cont w-[80%] h-[95%] border border-zinc-300 rounded-xl px-6 mt-5 ml-10 shadow-lg backdrop-blur-[0.2em] inset-shadow-zinc-200/50 absolute top-10">
@@ -77,8 +173,6 @@ function Gallery() {
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
 
@@ -87,6 +181,75 @@ function Gallery() {
                     style={{ backgroundImage: "url('/backgrounds/Cook Diary.jpg')", objectFit: "cover" }}>
                     <div className="image-area w-[52%] h-[65%] rounded-3xl absolute left-[23%] top-[25%] z-[100] bg-cover bg-center shadow-[10px_13px_46px_0px_#fdca40]"
                         style={{ backgroundImage: "url('/Dishes/Full Thali.png')" }}></div>
+                </div>
+
+                {/* Title + Gold Line (appears at Page3) */}
+                <div className="scroll-title fixed top-6 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-center opacity-0">
+                    <h2 className="text-7xl font-bold text-[#f48c06] mb-2 font-[Valent]">
+                        The Poetry of Her Hands
+                    </h2>
+                    <div className="gold-line2 w-full flex justify-center">
+                        <img
+                            src="/Lines/LineCom 2.png"
+                            className="max-w-[80%] h-auto"
+                            alt="Title"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+
+
+                {/* Horizontal Scroll Section */}
+                <div className="page3 h-screen w-full mt-2 px-4 bg-center bg-no-repeat bg-cover relative overflow-hidden"
+                            style={{ backgroundImage: "url('/backgrounds/MehndiBg.jpg')", objectFit: "cover" }}>
+                    <div className="horizontal-wrapper flex gap-20">
+
+                        <div className="horizontal-slide h-screen w-screen flex items-center justify-center">
+                            <img
+                                src="/hands/snapHand.png"
+                                className="max-w-[380px] h-[650px] object-cover rounded-2xl shadow-2xl"
+                                alt=""
+                                loading="lazy"
+                            />
+                        </div>
+
+                        <div className="horizontal-slide h-screen w-screen flex items-center justify-center">
+                            <img
+                                src="/hands/M1.jpg"
+                                className="max-w-[380px] h-[600px] object-cover rounded-2xl shadow-2xl"
+                                alt=""
+                                loading="lazy"
+                            />
+                        </div>
+
+                        <div className="horizontal-slide h-screen w-screen flex items-center justify-center">
+                            <img
+                                src="/hands/M2.jpg"
+                                className="max-w-[380px] h-[600px] object-cover rounded-2xl shadow-2xl"
+                                alt=""
+                                loading="lazy"
+                            />
+                        </div>
+
+                        <div className="horizontal-slide h-screen w-screen flex items-center justify-center">
+                            <img
+                                src="/hands/M3.jpg"
+                                className="max-w-[380px] h-[600px] object-cover rounded-2xl shadow-2xl"
+                                alt=""
+                                loading="lazy"
+                            />
+                        </div>
+
+                        <div className="horizontal-slide h-screen w-screen flex items-center justify-center">
+                            <img
+                                src="/hands/M4.jpg"
+                                className="max-w-[380px] h-[600px] object-cover rounded-2xl shadow-2xl"
+                                alt=""
+                                loading="lazy"
+                            />
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
