@@ -406,6 +406,14 @@ class App {
     image: `/madam/Face2.jpg`,
     text: "Sajni",
   },
+  {
+    image: `/madam/Radhey1.jpg`,
+    text: "Radhikey",
+  },
+  {
+    image: `/madam/Radhey2.jpg`,
+    text: "Vrashbhanusudha Gopi",
+  },
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);
