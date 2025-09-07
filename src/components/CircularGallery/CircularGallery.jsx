@@ -414,6 +414,10 @@ class App {
     image: `/madam/Radhey2.jpg`,
     text: "Vrashbhanusudha Gopi",
   },
+  {
+    image: `/madam/SariHome.png`,
+    text: "Sharmili-Sharma",
+  },
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);

@@ -4,6 +4,8 @@ import BadamFlake from '../components/All Cursors/BadamFlake'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import { CardCarousel } from "@/components/ui/card-carousel"
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,80 +48,16 @@ function Gallery() {
             }
         });
 
-        const sections = gsap.utils.toArray(".horizontal-slide");
-        const title = document.querySelector(".scroll-title");
 
-        // Title fade-in when Page3 starts
-        gsap.fromTo(".scroll-title",
-            { y: -50, opacity: 0 },
-            {
-                y: 0,
-                opacity: 1,
-                duration: 1,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".page3",
-                    start: "top center",
-                    toggleActions: "play none none reverse"
-                }
-            }
-        );
-
-        // Horizontal slides animation
-        gsap.to(sections, {
-            xPercent: -100 * (sections.length - 1),
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".page3",
-                pin: true,
-                scrub: 1,
-                end: () =>
-                    "+=" + document.querySelector(".horizontal-wrapper").scrollWidth,
-            },
-        });
-
-        // Title horizontal movement synced with slides
-        gsap.to(title, {
-            x: () =>
-                -(document.querySelector(".horizontal-wrapper").scrollWidth - window.innerWidth),
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".page3",
-                start: "top top",
-                scrub: 1,
-                end: () =>
-                    "+=" + document.querySelector(".horizontal-wrapper").scrollWidth,
-            },
-        });
-
-        // Fade out after Page3 ends
-        gsap.to(".scroll-title", {
-            opacity: 0,
-            scrollTrigger: {
-                trigger: ".page3",
-                start: "bottom bottom",
-                toggleActions: "play none none reverse"
-            }
-        });
-
-        // ✨ Images reveal animation
-        gsap.from(".horizontal-slide img", {
-            opacity: 0,
-            scale: 0.9,
-            y: 50,
-            duration: 1,
-            stagger: 0.5,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: ".page3",
-                start: "top top",
-                scrub: 1,
-                end: () =>
-                    "+=" + document.querySelector(".horizontal-wrapper").scrollWidth,
-            },
-        });
 
     }, []);
+
+    const images = [
+        { src: "/hands/snapHand.png", alt: "Image 1" },
+        { src: "/hands/M1.jpg", alt: "Image 2" },
+        { src: "/hands/M2.jpg", alt: "Image 3" },
+        { src: "/hands/M4.jpg", alt: "Image 4" },
+    ]
 
     return (
         <>
@@ -200,55 +138,15 @@ function Gallery() {
 
 
                 {/* Horizontal Scroll Section */}
-                <div className="page3 h-screen w-full mt-2 px-4 bg-center bg-no-repeat bg-cover relative overflow-hidden"
-                            style={{ backgroundImage: "url('/backgrounds/MehndiBg.jpg')", objectFit: "cover" }}>
-                    <div className="horizontal-wrapper flex gap-20">
-
-                        <div className="horizontal-slide h-screen w-screen flex items-center justify-center">
-                            <img
-                                src="/hands/snapHand.png"
-                                className="max-w-[380px] h-[650px] object-cover rounded-2xl shadow-2xl"
-                                alt=""
-                                loading="lazy"
-                            />
-                        </div>
-
-                        <div className="horizontal-slide h-screen w-screen flex items-center justify-center">
-                            <img
-                                src="/hands/M1.jpg"
-                                className="max-w-[380px] h-[600px] object-cover rounded-2xl shadow-2xl"
-                                alt=""
-                                loading="lazy"
-                            />
-                        </div>
-
-                        <div className="horizontal-slide h-screen w-screen flex items-center justify-center">
-                            <img
-                                src="/hands/M2.jpg"
-                                className="max-w-[380px] h-[600px] object-cover rounded-2xl shadow-2xl"
-                                alt=""
-                                loading="lazy"
-                            />
-                        </div>
-
-                        <div className="horizontal-slide h-screen w-screen flex items-center justify-center">
-                            <img
-                                src="/hands/M3.jpg"
-                                className="max-w-[380px] h-[600px] object-cover rounded-2xl shadow-2xl"
-                                alt=""
-                                loading="lazy"
-                            />
-                        </div>
-
-                        <div className="horizontal-slide h-screen w-screen flex items-center justify-center">
-                            <img
-                                src="/hands/M4.jpg"
-                                className="max-w-[380px] h-[600px] object-cover rounded-2xl shadow-2xl"
-                                alt=""
-                                loading="lazy"
-                            />
-                        </div>
-
+                <div className="page3 h-screen w-full mt-2 px-4 bg-center bg-no-repeat bg-cover relative overflow-hidden flex justify-center items-center"
+                    style={{ backgroundImage: "url('/backgrounds/MehndiBg.jpg')", objectFit: "cover" }}>
+                    <div className="pt-20">
+                        <CardCarousel
+                            images={images}
+                            autoplayDelay={2000}
+                            showPagination={true}
+                            showNavigation={true}
+                        />
                     </div>
                 </div>
 
