@@ -29,7 +29,7 @@ export const CardCarousel = ({
   .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 350px;
+    width: 300px;
   }
   
   .swiper-slide img {
