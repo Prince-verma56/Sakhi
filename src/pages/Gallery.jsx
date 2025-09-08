@@ -6,7 +6,6 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { CardCarousel } from "@/components/ui/card-carousel"
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 function Gallery() {
@@ -47,9 +46,6 @@ function Gallery() {
                 toggleActions: "play reverse play reverse"
             }
         });
-
-
-
     }, []);
 
     const images = [
@@ -61,9 +57,12 @@ function Gallery() {
 
     return (
         <>
-            <BadamFlake />
+            {/* <BadamFlake /> */}
             <div className="w-full h-full bg-[#fefae0] overflow-x-hidden px-4">
-                <Navbar />
+                {/* Navbar fixed at top layer */}
+                <div className="relative z-[9999]">
+                    <Navbar />
+                </div>
 
                 {/* PAGE 1 */}
                 <div className="page1 w-full h-20 p-10 mb-2 mt-10 flex justify-center items-center">
@@ -80,16 +79,20 @@ function Gallery() {
                     <img src="/Lines/LineCom 2.png" width={1000} alt="" loading='lazy' />
                 </div>
 
-                <div className="page1-main h-screen w-full mt-2 px-4 bg-center bg-no-repeat bg-cover select-none pointer-events-none"
-                    style={{ backgroundImage: "url('/backgrounds/Staionary.png')", objectFit: "cover" }}>
+                <div
+                    className="page1-main h-screen w-full mt-2 px-4 bg-center bg-no-repeat bg-cover select-none"
+                    style={{ backgroundImage: "url('/backgrounds/Staionary.png')", objectFit: "cover" }}
+                >
                     <div className="hero relative w-[90%] h-[95%] m-auto flex justify-around px-10 py-1 ">
                         <div className="hero-left1 w-[45%] h-[95%] flex items-end justify-center -translate-y-20 relative top-4 left-12">
-                            <div className="shadow-[-12px_10px_46px_0px_#ffba08] w-[80%] h-[95%] rounded-3xl overflow-hidden border-2 border-white bg-center bg-cover flex items-center justify-center absolute top-10 left-20"
-                                style={{ backgroundImage: "url('/Dishes/Maal Pua 2.jpg')", objectFit: "cover", backgroundPosition: "center" }}>
-                            </div>
+                            <div
+                                className="shadow-[-12px_10px_46px_0px_#ffba08] w-[80%] h-[95%] rounded-3xl overflow-hidden border-2 border-white bg-center bg-cover flex items-center justify-center absolute top-10 left-20"
+                                style={{ backgroundImage: "url('/Dishes/Maal Pua 2.jpg')", objectFit: "cover", backgroundPosition: "center" }}
+                            ></div>
                         </div>
 
-                        <div className="iso-leave1 absolute w-40 h-40 right-12"
+                        <div
+                            className="iso-leave1 absolute w-40 h-40 right-12 pointer-events-none"
                             style={{ backgroundImage: "url('/Dishes/Iso-leaves3.png')", backgroundSize: "cover", backgroundPosition: "center" }}
                         ></div>
 
@@ -115,10 +118,14 @@ function Gallery() {
                 </div>
 
                 {/* PAGE 2 */}
-                <div className="page2 h-screen w-full mt-2 px-4 bg-center bg-no-repeat bg-cover relative"
-                    style={{ backgroundImage: "url('/backgrounds/Cook Diary.jpg')", objectFit: "cover" }}>
-                    <div className="image-area w-[52%] h-[65%] rounded-3xl absolute left-[23%] top-[25%] z-[100] bg-cover bg-center shadow-[10px_13px_46px_0px_#fdca40]"
-                        style={{ backgroundImage: "url('/Dishes/Full Thali.png')" }}></div>
+                <div
+                    className="page2 h-screen w-full mt-2 px-4 bg-center bg-no-repeat bg-cover relative"
+                    style={{ backgroundImage: "url('/backgrounds/Cook Diary.jpg')", objectFit: "cover" }}
+                >
+                    <div
+                        className="image-area w-[52%] h-[65%] rounded-3xl absolute left-[23%] top-[25%] z-[100] bg-cover bg-center shadow-[10px_13px_46px_0px_#fdca40]"
+                        style={{ backgroundImage: "url('/Dishes/Full Thali.png')" }}
+                    ></div>
                 </div>
 
                 {/* Title + Gold Line (appears at Page3) */}
@@ -136,10 +143,11 @@ function Gallery() {
                     </div>
                 </div>
 
-
                 {/* Horizontal Scroll Section */}
-                <div className="page3 h-screen w-full mt-2 px-4 bg-center bg-no-repeat bg-cover relative overflow-hidden flex justify-center items-center"
-                    style={{ backgroundImage: "url('/backgrounds/MehndiBg.jpg')", objectFit: "cover" }}>
+                <div
+                    className="page3 h-screen w-full mt-2 px-4 bg-center bg-no-repeat bg-cover relative overflow-hidden flex justify-center items-center"
+                    style={{ backgroundImage: "url('/backgrounds/MehndiBg.jpg')", objectFit: "cover" }}
+                >
                     <div className="pt-20">
                         <CardCarousel
                             images={images}
@@ -149,7 +157,6 @@ function Gallery() {
                         />
                     </div>
                 </div>
-
             </div>
         </>
     )

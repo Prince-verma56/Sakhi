@@ -31,7 +31,7 @@ function Navbar() {
     return (
         <>
 
-            <div className="navbar font-serif w-full h-30  flex justify-center items-center  py-2">
+            <div className="navbar font-serif w-full h-30  flex justify-center items-center  py-2 z-[99]">
                 <nav className='w-3/4 h-2/4   flex items-center relative justify-center'>
                     <div className="nav-left h-full w-1/2 flex items-center justify-center gap-10 ">
                         {/* {["Home", "Work", "Gallery"].map((elem, idx) => {
